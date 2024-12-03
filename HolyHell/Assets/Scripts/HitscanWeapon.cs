@@ -4,7 +4,9 @@ public class HitscanWeapon : Weapon
 {
     [Header("Specific Weapon Stats")]
     public int damage;
+    public int numberOfRays;
     public float range;
+    public float spread;
     public LayerMask whatToHit;
     private float timer;
     private RaycastHit raycastHit;
@@ -24,13 +26,22 @@ public class HitscanWeapon : Weapon
     }
 
     public override void Fire() {
-        if(Physics.Raycast(base.weaponTransform.position, base.weaponTransform.forward, out raycastHit, range, whatToHit)) {
-            Debug.DrawLine(base.weaponTransform.position, raycastHit.point, Color.green, 2.5f);
-            Debug.Log("Did Hit! Damage: " + damage);
-        }
-        else { 
-            Debug.DrawLine(base.weaponTransform.position, base.weaponTransform.forward * range, Color.red, 2.5f);
-            Debug.Log("Did not hit!");
+
+        for(int i = 0; i < numberOfRays; i++) {
+            Vector3 direction = base.weaponTransform.forward +
+                                new Vector3(
+                                    Random.Range(-spread, spread),
+                                    Random.Range(-spread, spread),
+                                    0f).normalized;
+
+            if(Physics.Raycast(base.weaponTransform.position, direction, out raycastHit, range, whatToHit)) {
+                Debug.DrawLine(base.weaponTransform.position, raycastHit.point, Color.green, 2.5f);
+                Debug.Log("Did Hit! Damage: " + damage);
+            }
+            else { 
+                Debug.DrawLine(base.weaponTransform.position, direction * range, Color.red, 2.5f);
+                Debug.Log("Did not hit!");
+            }   
         }
     }
 }
