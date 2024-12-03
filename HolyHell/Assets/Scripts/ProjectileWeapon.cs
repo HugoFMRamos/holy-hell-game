@@ -10,7 +10,7 @@ public class ProjectileWeapon : Weapon
 
     private void Start()
     {
-        timer = base.firerate;
+        timer = 0f;
     }
 
     private void Update()

@@ -13,7 +13,7 @@ public class HitscanWeapon : Weapon
 
     private void Start()
     {
-        timer = base.firerate;
+        timer = 0f;
     }
 
     private void Update()
@@ -32,7 +32,7 @@ public class HitscanWeapon : Weapon
                                 new Vector3(
                                     Random.Range(-spread, spread),
                                     Random.Range(-spread, spread),
-                                    0f).normalized;
+                                    0f);
 
             if(Physics.Raycast(base.weaponTransform.position, direction, out raycastHit, range, whatToHit)) {
                 Debug.DrawLine(base.weaponTransform.position, raycastHit.point, Color.green, 2.5f);

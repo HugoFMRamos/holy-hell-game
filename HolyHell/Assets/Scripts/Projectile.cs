@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour
     public float speed;
     public float lifeSpan;
     public bool affectedByGravity;
+    public bool destroyOnImpact;
     public Transform orientation;
     private Rigidbody rb;
 
@@ -25,7 +26,7 @@ public class Projectile : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
-        if(other.gameObject.tag != "Player") {
+        if(other.gameObject.tag != "Player" && destroyOnImpact) {
             Destroy(gameObject);
         }
     }
