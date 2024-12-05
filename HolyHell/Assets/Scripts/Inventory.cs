@@ -32,6 +32,10 @@ public class Inventory : MonoBehaviour
     }
 
     private void SwitchWeapon(int weaponToSwitch) {
+        if(weaponToSwitch == currentWeapon) {
+            return;
+        }
+
         weaponList[weaponToSwitch].SetActive(true);
         weaponList[currentWeapon].SetActive(false);
         currentWeapon = weaponToSwitch;

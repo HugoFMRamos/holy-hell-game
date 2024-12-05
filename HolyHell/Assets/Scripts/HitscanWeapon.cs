@@ -19,14 +19,14 @@ public class HitscanWeapon : Weapon
     private void Update()
     {
         timer -= Time.deltaTime;
-        if(Input.GetKey(fireButton) && timer < 0f) {
+        if(Input.GetKey(fireButton) && timer < 0f && base.ammo > 0) {
             Fire();
             timer = base.firerate;
+            base.ammo -= 1;
         }
     }
 
     public override void Fire() {
-
         for(int i = 0; i < numberOfRays; i++) {
             Vector3 direction = base.weaponTransform.forward +
                                 new Vector3(
