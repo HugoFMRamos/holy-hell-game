@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class PlayerController : MonoBehaviour
 {
     [Header("References")]
     public Transform orientation;
+    public Transform p1;
     private CapsuleCollider capsuleCollider;
     private Rigidbody rb;
 
@@ -70,7 +72,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update() {
         //Ground check
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
+        //grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.5f, whatIsGround);
+        grounded = Physics.SphereCast(transform.position, radius, -transform.up, out RaycastHit hit, 1f, whatIsGround);
         cantStand = Physics.CheckCapsule(transform.position , transform.position + new Vector3(0, playerHeight * 0.25f + 0.3f, 0), radius, whatIsGround);
 
         GetInput();
