@@ -7,27 +7,29 @@ public class Inventory : MonoBehaviour
 {
     [Header("Inventory")]
     public List<GameObject> weaponList;
-    private int currentWeapon;
-
+    public KeyCode waferKey;
+    public KeyCode shotgunKey;
+    public KeyCode grenadeKey;
+    public KeyCode scepterKey;
+    public KeyCode bibleKey;
+    private int currentWeapon = 4;
+    
+    private IEnumerator Start() {
+        yield return new WaitForSeconds(.001f);
+        ClearInventory(); 
+    }
 
     private void Update() {
-        string keyInput = Input.inputString;
-        switch(keyInput) {
-            case "1":
-                SwitchWeapon(0);
-                break;
-            case "2":
-                SwitchWeapon(1);
-                break;
-            case "3":
-                SwitchWeapon(2);
-                break;
-            case "4":
-                SwitchWeapon(3);
-                break;
-            case "5":
-                SwitchWeapon(4);
-                break;
+        if(Input.GetKeyDown(waferKey)) {
+            SwitchWeapon(0);
+        } else if (Input.GetKeyDown(shotgunKey)) {
+            SwitchWeapon(1);
+        } else if (Input.GetKeyDown(grenadeKey)) {
+            SwitchWeapon(2);
+        } else if (Input.GetKeyDown(scepterKey)) {
+            SwitchWeapon(3);
+        } else if (Input.GetKeyDown(bibleKey)) {
+            SwitchWeapon(4);
         }
     }
 
@@ -39,5 +41,12 @@ public class Inventory : MonoBehaviour
         weaponList[weaponToSwitch].SetActive(true);
         weaponList[currentWeapon].SetActive(false);
         currentWeapon = weaponToSwitch;
+    }
+
+    private void ClearInventory() {
+        for(int i = 0; i < weaponList.Count; i++) {
+            weaponList[i].SetActive(false);
+        }
+        SwitchWeapon(0);
     }
 }

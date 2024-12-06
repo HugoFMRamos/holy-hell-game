@@ -14,12 +14,13 @@ public class HitscanWeapon : Weapon
     private void Start()
     {
         timer = 0f;
+        base.ammo = base.startAmmo;
     }
 
     private void Update()
     {
         timer -= Time.deltaTime;
-        if(Input.GetKey(fireButton) && timer < 0f && base.ammo > 0) {
+        if(Input.GetKey(fireButton) && timer < 0f && base.ammo != 0) {
             Fire();
             timer = base.firerate;
             base.ammo -= 1;

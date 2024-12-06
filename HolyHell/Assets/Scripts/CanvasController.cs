@@ -21,7 +21,11 @@ public class CanvasController : MonoBehaviour
         if (activeWeapon != null)
         {
             Weapon weapon = activeWeapon.GetComponent<Weapon>();
-            ammoText.text = "Ammo: " + weapon.ammo;
+            if(weapon.startAmmo == -1) {
+                ammoText.text = "Ammo: Inf";
+            } else {
+                ammoText.text = "Ammo: " + weapon.ammo;
+            }
         }
     }
 
