@@ -9,6 +9,11 @@ public class PlayerSystem : MonoBehaviour {
     public int maxArmor = 200;
     public float armorAbsorbtionPercentage = .8f;
 
+    [Header("Player Stats")]
+    public bool hasRedKey;
+    public bool hasBlueKey;
+    public bool hasYellowKey;
+
     private void Update() {
         if(Input.GetKeyDown(KeyCode.P)) {
             DamageMe(20);

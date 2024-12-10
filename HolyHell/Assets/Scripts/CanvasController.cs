@@ -14,6 +14,9 @@ public class CanvasController : MonoBehaviour
     public TextMeshProUGUI ammoText;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI armorText;
+    public GameObject redKey;
+    public GameObject blueKey;
+    public GameObject yellowKey;
 
     private GameObject activeWeapon;
 
@@ -27,6 +30,8 @@ public class CanvasController : MonoBehaviour
         {
             SetAmmoText();
         }
+
+
     }
 
     private void SetSpeedText() {
@@ -60,6 +65,20 @@ public class CanvasController : MonoBehaviour
                 activeWeapon = weapon;
                 break;
             }
+        }
+    }
+
+    public void EnableKey(int keyToEnable) {
+        switch(keyToEnable) {
+            case 0:
+                redKey.SetActive(true);
+                break;
+            case 1:
+                blueKey.SetActive(true);
+                break;
+            case 2:
+                yellowKey.SetActive(true);
+                break;
         }
     }
 }

@@ -34,13 +34,16 @@ public class Inventory : MonoBehaviour
     }
 
     private void SwitchWeapon(int weaponToSwitch) {
+        Weapon weapon = weaponList[weaponToSwitch].GetComponent<Weapon>();
+
         if(weaponToSwitch == currentWeapon) {
             return;
         }
-
-        weaponList[weaponToSwitch].SetActive(true);
-        weaponList[currentWeapon].SetActive(false);
-        currentWeapon = weaponToSwitch;
+        else if(weapon.isInInventory) {
+            weaponList[weaponToSwitch].SetActive(true);
+            weaponList[currentWeapon].SetActive(false);
+            currentWeapon = weaponToSwitch;
+        }
     }
 
     private void ClearInventory() {

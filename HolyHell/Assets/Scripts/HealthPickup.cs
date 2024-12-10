@@ -5,9 +5,12 @@ public class HealthPickup : PickUp {
     public PlayerSystem player;
 
     private void OnTriggerEnter(Collider other) {
-        if(player.health < player.maxHealth) {
+        if (other.gameObject.tag != "Player") return;
+
+        if (player.health < player.maxHealth) {
             player.HealMe(base.valueToAdd, true);
-            Destroy(gameObject);
         }
+
+        Destroy(gameObject);
     }
 }
