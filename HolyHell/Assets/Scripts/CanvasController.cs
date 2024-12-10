@@ -6,26 +6,26 @@ public class CanvasController : MonoBehaviour
 {
     [Header("References")]
     public PlayerController playerController;
+    public PlayerSystem playerSystem;
     public List<GameObject> weaponList;
 
     [Header("Canvas Elements")]
     public TextMeshProUGUI speedText;
     public TextMeshProUGUI ammoText;
+    public TextMeshProUGUI healthText;
+    public TextMeshProUGUI armorText;
 
     private GameObject activeWeapon;
 
     private void Update() {
+        SetPlayerHealth();
+        SetPlayerArmor();
         SetSpeedText();
 
         FindCurrentActiveWeapon();
         if (activeWeapon != null)
         {
-            Weapon weapon = activeWeapon.GetComponent<Weapon>();
-            if(weapon.startAmmo == -1) {
-                ammoText.text = "Ammo: Inf";
-            } else {
-                ammoText.text = "Ammo: " + weapon.ammo;
-            }
+            SetAmmoText();
         }
     }
 
@@ -34,7 +34,20 @@ public class CanvasController : MonoBehaviour
     }
 
     private void SetAmmoText() {
-        ammoText.text = "Ammo: " + activeWeapon.GetComponent<Weapon>().ammo;
+        Weapon weapon = activeWeapon.GetComponent<Weapon>();
+        if(weapon.startAmmo == -1) {
+            ammoText.text = "Ammo: Inf";
+        } else {
+            ammoText.text = "Ammo: " + weapon.ammo;
+        }
+    }
+
+    private void SetPlayerHealth() {
+        healthText.text = "Health: " + playerSystem.health;
+    }
+
+    private void SetPlayerArmor() {
+        armorText.text = "Armor: " + playerSystem.armor;
     }
 
     private void FindCurrentActiveWeapon() {

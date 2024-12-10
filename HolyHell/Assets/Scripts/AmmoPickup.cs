@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AmmoPickup : MonoBehaviour
+public class AmmoPickup : PickUp
 {
+    [Header("Specific Stats")]
     public Weapon weapon;
 
-    [Header("Stats")]
-    public int ammoToAdd;
-
     private void OnTriggerEnter(Collider other) {
-        weapon.ammo += ammoToAdd;
+        weapon.ammo += base.valueToAdd;
         Destroy(gameObject);
     }
 }
