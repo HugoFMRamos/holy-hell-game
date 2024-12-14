@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 405121637214802003}
   - component: {fileID: 8127577147518544019}
   m_Layer: 8
-  m_Name: WaferProjectile
-  m_TagString: Untagged
+  m_Name: GrenadeProjectile
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,9 +146,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb69aecf9c2414945bcd587a4b6772c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  speed: 40
+  damage: 30
+  forwardSpeed: 32
+  upwardSpeed: 10
   lifeSpan: 3
-  affectedByGravity: 0
-  destroyOnImpact: 1
+  affectedByGravity: 1
+  destroyOnImpact: 0
   orientation: {fileID: 0}

@@ -36,6 +36,11 @@ public class HitscanWeapon : Weapon
                                     0f);
 
             if(Physics.Raycast(base.weaponTransform.position, direction, out raycastHit, range, whatToHit)) {
+                Enemy enemy = raycastHit.collider.gameObject.GetComponent<Enemy>();
+                if(enemy != null) {
+                    enemy.TakeDamage(damage);
+                }
+
                 Debug.DrawLine(base.weaponTransform.position, raycastHit.point, Color.green, 2.5f);
                 Debug.Log("Did Hit! Damage: " + damage);
             }

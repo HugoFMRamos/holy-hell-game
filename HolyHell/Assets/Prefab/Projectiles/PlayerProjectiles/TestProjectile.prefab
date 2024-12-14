@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8127577147518544019}
   m_Layer: 8
   m_Name: TestProjectile
-  m_TagString: Untagged
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +147,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  speed: 20
+  forwardSpeed: 0
+  upwardSpeed: 0
   lifeSpan: 5
   affectedByGravity: 0
+  destroyOnImpact: 0
   orientation: {fileID: 0}

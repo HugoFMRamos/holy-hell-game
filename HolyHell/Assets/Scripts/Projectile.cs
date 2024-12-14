@@ -7,7 +7,8 @@ public class Projectile : MonoBehaviour
 {
     [Header("Stats")]
     public int damage;
-    public float speed;
+    public float forwardSpeed;
+    public float upwardSpeed;
     public float lifeSpan;
     public bool affectedByGravity;
     public bool destroyOnImpact;
@@ -21,12 +22,18 @@ public class Projectile : MonoBehaviour
     }
 
     private void Start() {
-        rb.AddForce(rb.transform.forward * speed, ForceMode.Impulse);
+        rb.AddForce(rb.transform.forward * forwardSpeed, ForceMode.Impulse);
+        rb.AddForce(rb.transform.up * upwardSpeed, ForceMode.Impulse);
         Destroy(gameObject, lifeSpan);
     }
 
     private void OnCollisionEnter(Collision other) {
-        if(other.gameObject.tag != "Player" && destroyOnImpact) {
+        Enemy enemy = other.gameObject.GetComponent<Enemy>();
+        if(enemy != null) {
+            enemy.TakeDamage(damage);
+        }
+
+        if(destroyOnImpact) {
             Destroy(gameObject);
         }
     }
