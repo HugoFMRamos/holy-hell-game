@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CanvasController : MonoBehaviour
 {
@@ -95,5 +96,10 @@ public class CanvasController : MonoBehaviour
                 yellowKey.SetActive(true);
                 break;
         }
+    }
+
+    public void RestartLevel() {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
     }
 }

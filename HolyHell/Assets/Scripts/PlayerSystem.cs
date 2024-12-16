@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerSystem : MonoBehaviour {
@@ -8,16 +9,37 @@ public class PlayerSystem : MonoBehaviour {
     public int armor = 100;
     public int maxArmor = 200;
     public float armorAbsorbtionPercentage = .8f;
+    public bool hasPlayerDied;
+    public GameObject gameOverScreen;
+    public GameObject player;
+    public GameObject playerCamera;
 
-    [Header("Player Stats")]
+    [Header("Player Keys")]
     public bool hasRedKey;
     public bool hasBlueKey;
     public bool hasYellowKey;
+
+
 
     private void Update() {
         if(Input.GetKeyDown(KeyCode.P)) {
             DamageMe(20);
         }
+
+        if(health <= 0 && !hasPlayerDied) {
+            hasPlayerDied = true;
+            GameOver();
+        }
+    }
+
+    private void GameOver()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+        player.SetActive(false);
+        playerCamera.GetComponent<CameraController>().enabled = false;
+        gameOverScreen.SetActive(true);
     }
 
     public void DamageMe(int damage) {
