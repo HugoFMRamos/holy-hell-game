@@ -14,11 +14,17 @@ public class CanvasController : MonoBehaviour
     public TextMeshProUGUI ammoText;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI armorText;
+    public TextMeshProUGUI statusText;
     public GameObject redKey;
     public GameObject blueKey;
     public GameObject yellowKey;
 
     private GameObject activeWeapon;
+
+    private void Awake() {
+        playerSystem = GameObject.Find("Player").GetComponent<PlayerSystem>();
+        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+    }
 
     private void Update() {
         SetPlayerHealth();
@@ -32,6 +38,15 @@ public class CanvasController : MonoBehaviour
         }
 
 
+    }
+
+    public void SetStatusText(string text) {
+        statusText.text = text;
+        Invoke(nameof(ResetStatusText), 3f);
+    }
+
+    private void ResetStatusText() {
+        statusText.text = "";
     }
 
     private void SetSpeedText() {

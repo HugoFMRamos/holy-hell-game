@@ -150,6 +150,12 @@ MonoBehaviour:
   forwardSpeed: 32
   upwardSpeed: 10
   lifeSpan: 3
+  explosionRadius: 5
   affectedByGravity: 1
-  destroyOnImpact: 0
+  destroyOnImpact: 1
+  canExplode: 1
+  whatIsHitOnExplode:
+    serializedVersion: 2
+    m_Bits: 1088
   orientation: {fileID: 0}
+  explosionEffect: {fileID: 1000011797152326, guid: ad12de52d48a73c4c8c53b80da51f9d0, type: 3}

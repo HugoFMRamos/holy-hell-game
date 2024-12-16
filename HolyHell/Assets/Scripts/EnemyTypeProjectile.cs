@@ -7,7 +7,6 @@ public class EnemyTypeProjectile : Enemy {
     public float projectileUpwardSpeed;
 
     public override void Attack() {
-        Debug.Log("Attacking!");
         //Make sure enemy doesn't move
         navMeshAgent.SetDestination(transform.position);
         

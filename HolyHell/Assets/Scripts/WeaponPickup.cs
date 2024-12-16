@@ -17,6 +17,8 @@ public class WeaponPickup : PickUp {
             weapon.ammo = Mathf.Min(weapon.ammo, weapon.maxAmmo);
         }
 
+        string text = "You got the " + weapon.name + "!";
+        playerHUD.SetStatusText(text);
         Destroy(gameObject);
     }
 }

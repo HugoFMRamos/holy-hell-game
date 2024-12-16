@@ -41,7 +41,6 @@ public abstract class Enemy : MonoBehaviour {
         if(!walkPointSet) SearchWalkPoint();
 
         if(walkPointSet) {
-            Debug.Log("Patrolling!");
             navMeshAgent.SetDestination(walkPoint);
         }
 
@@ -63,7 +62,6 @@ public abstract class Enemy : MonoBehaviour {
     }
 
     private void Chase() {
-        Debug.Log("Chasing!");
         navMeshAgent.SetDestination(player.position);
     }
 
@@ -78,7 +76,7 @@ public abstract class Enemy : MonoBehaviour {
     public void TakeDamage(int damage) {
         enemyHealth -= damage;
 
-        if(enemyHealth <= 0) Invoke(nameof(DestroyEnemy), .5f);
+        if(enemyHealth <= 0) DestroyEnemy();
     }
 
     private void DestroyEnemy() {

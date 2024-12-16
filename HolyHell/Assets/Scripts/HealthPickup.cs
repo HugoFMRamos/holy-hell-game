@@ -11,6 +11,8 @@ public class HealthPickup : PickUp {
             player.HealMe(base.valueToAdd, true);
         }
 
+        string text = "+" + base.valueToAdd + " health!";
+        playerHUD.SetStatusText(text);
         Destroy(gameObject);
     }
 }

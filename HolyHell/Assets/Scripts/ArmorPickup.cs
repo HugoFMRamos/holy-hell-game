@@ -11,6 +11,8 @@ public class ArmorPickup : PickUp {
             player.HealMe(base.valueToAdd, false);
         }
 
+        string text = "+" + base.valueToAdd + " armor!";
+        playerHUD.SetStatusText(text);
         Destroy(gameObject);
     }
 }

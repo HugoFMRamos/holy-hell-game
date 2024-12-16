@@ -15,6 +15,8 @@ public class AmmoPickup : PickUp
             weapon.ammo = Mathf.Min(weapon.ammo, weapon.maxAmmo);
         }
 
+        string text = "+" + base.valueToAdd + " " + weapon.name + " ammo!";
+        playerHUD.SetStatusText(text);
         Destroy(gameObject);
     }
 }
