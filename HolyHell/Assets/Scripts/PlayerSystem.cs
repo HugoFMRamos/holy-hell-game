@@ -32,7 +32,7 @@ public class PlayerSystem : MonoBehaviour {
         }
     }
 
-    private void GameOver()
+    public void GameOver()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
