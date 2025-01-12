@@ -16,7 +16,7 @@ public abstract class Enemy : MonoBehaviour {
 
     //Attacking
     public float timeBetweenAttacks;
-    public bool alreadyAttacked;
+    public bool alreadyAttacked, flyingEnemy;
 
     //States
     public float sightRange, attackRange;
@@ -38,16 +38,19 @@ public abstract class Enemy : MonoBehaviour {
     }
 
     private void Patrolling() {
-        if(!walkPointSet) SearchWalkPoint();
+        if (!walkPointSet) SearchWalkPoint();
 
-        if(walkPointSet) {
+        if (walkPointSet) {
             navMeshAgent.SetDestination(walkPoint);
+        } else {
+            // If the walk point is unreachable, reset it and search for a new one
+            walkPointSet = false;
         }
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
-        //Walkpoint reached
-        if(distanceToWalkPoint.magnitude < 1f) walkPointSet = false;
+        // Walkpoint reached
+        if (distanceToWalkPoint.magnitude < 2f) walkPointSet = false;
     }
 
     private void SearchWalkPoint()
@@ -56,17 +59,43 @@ public abstract class Enemy : MonoBehaviour {
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
 
-        walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
+        if(!flyingEnemy) {
+            walkPoint = ProjectToNavMesh(new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ));
+        } else {
+            walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
+        }
 
-        if(Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround)) walkPointSet = true;
+        if(IsDestinationReachable(walkPoint)) {
+            walkPointSet = true;
+        }
     }
 
     private void Chase() {
-        navMeshAgent.SetDestination(player.position);
+        Vector3 targetPosition = ProjectToNavMesh(player.position);
+
+        if (targetPosition != Vector3.zero && IsDestinationReachable(targetPosition)) {
+            navMeshAgent.SetDestination(player.position);
+        } else {
+            Patrolling();
+        }
     }
 
     public virtual void Attack() {
         
+    }
+
+    private Vector3 ProjectToNavMesh(Vector3 position) {
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(position, out hit, 5f, NavMesh.AllAreas)) {
+            return hit.position; // Return the nearest point on the NavMesh
+        }
+        return Vector3.zero; // Return zero vector if no valid position is found
+    }
+
+    private bool IsDestinationReachable(Vector3 destination) {
+        NavMeshPath path = new NavMeshPath();
+        navMeshAgent.CalculatePath(destination, path);
+        return path.status == NavMeshPathStatus.PathComplete;
     }
 
     public void ResetAttack() {
