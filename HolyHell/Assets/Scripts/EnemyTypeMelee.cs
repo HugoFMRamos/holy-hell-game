@@ -6,24 +6,29 @@ public class EnemyTypeMelee : Enemy {
     public int damage;
 
     public override void Attack() {
+        animator.SetBool("Attack", true);
+
         //Make sure enemy doesn't move
-        navMeshAgent.SetDestination(transform.position);
-        
+        navMeshAgent.isStopped = true;
         transform.LookAt(player);
+    }
 
+    public void attackCalled() {
         if(!alreadyAttacked) {
-
             damageCollider.enabled = true;
 
             alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+        }
+        
+        if (!playerInAttackRange) {
+            damageCollider.enabled = false;
         }
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.gameObject.tag == "Player") {
+        if(other.gameObject.tag == "Player" && !isDead) {
             player.GetComponent<PlayerSystem>().DamageMe(damage);
+            damageCollider.enabled = false;
         }
-        damageCollider.enabled = false;
     }
 }

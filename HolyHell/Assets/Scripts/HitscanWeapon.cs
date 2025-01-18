@@ -28,6 +28,7 @@ public class HitscanWeapon : Weapon
     }
 
     public override void Fire() {
+        TriggerEnemies();
         for(int i = 0; i < numberOfRays; i++) {
             Vector3 direction = base.weaponTransform.forward +
                                 new Vector3(

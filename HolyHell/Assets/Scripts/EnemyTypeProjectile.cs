@@ -7,19 +7,18 @@ public class EnemyTypeProjectile : Enemy {
     public float projectileUpwardSpeed;
 
     public override void Attack() {
+        animator.SetBool("Attack", true);
+
         //Make sure enemy doesn't move
-        navMeshAgent.SetDestination(transform.position);
-        
-        transform.LookAt(player);
+        navMeshAgent.isStopped = true;
+        Vector3 targetPosition = new Vector3(player.position.x, transform.position.y, player.position.z);
+        transform.LookAt(targetPosition);
+    }
 
-        if(!alreadyAttacked) {
-
-            Rigidbody rb = Instantiate(enemyProjectile, orientation.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(orientation.forward * projectileForwardSpeed, ForceMode.Impulse);
-            rb.AddForce(orientation.up * projectileUpwardSpeed, ForceMode.Impulse);
-
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
-        }
+    public void attackCalled() {
+        Vector3 directionToPlayer = (player.position - orientation.position).normalized;
+        Rigidbody rb = Instantiate(enemyProjectile, orientation.position, Quaternion.identity).GetComponent<Rigidbody>();
+        rb.AddForce(directionToPlayer * projectileForwardSpeed, ForceMode.Impulse);
+        rb.AddForce(orientation.up * projectileUpwardSpeed, ForceMode.Impulse);
     }
 }

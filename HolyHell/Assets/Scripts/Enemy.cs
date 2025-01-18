@@ -4,10 +4,15 @@ using UnityEngine.AI;
 public abstract class Enemy : MonoBehaviour {
     [Header("General Enemy Stats")]
     public int enemyHealth;
+    public bool isEnemyAggroed, isDead, detectedWeaponSound = false;
     public NavMeshAgent navMeshAgent;
     public Transform player;
     public Transform orientation;
     public LayerMask whatIsGround, whatIsPlayer;
+    public Animator animator;
+    public AnimatorStateInfo animatorState;
+    private float deathTimer;
+    [SerializeField] private int maxHealth;
 
     //Patroling
     public Vector3 walkPoint;
@@ -27,17 +32,36 @@ public abstract class Enemy : MonoBehaviour {
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
+    private void Start() {
+        maxHealth = enemyHealth;
+    }
+
     private void Update() {
         //Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+        isEnemyAggroed = enemyHealth < maxHealth || detectedWeaponSound || playerInSightRange;
 
-        if(!playerInSightRange && !playerInAttackRange) Patrolling();
-        if(playerInSightRange && !playerInAttackRange) Chase();
-        if(playerInAttackRange && playerInSightRange) Attack();
+        if(!isEnemyAggroed && !playerInSightRange && !playerInAttackRange && !isDead) Idle();
+        if(isEnemyAggroed && !playerInSightRange && !playerInAttackRange && !isDead) Patrolling();
+        if(isEnemyAggroed && playerInSightRange && !playerInAttackRange && !isDead) Chase();
+        if(isEnemyAggroed && playerInAttackRange && playerInSightRange && !isDead) Attack();
+
+        if(isDead) {
+            deathTimer += Time.deltaTime;
+        }
+        if(deathTimer > 10.0f) {
+            DestroyEnemy();
+        }
+    }
+
+    private void Idle() {
+        animator.SetBool("Idle", true);
     }
 
     private void Patrolling() {
+        animator.SetBool("Patrol", true);
+
         if (!walkPointSet) SearchWalkPoint();
 
         if (walkPointSet) {
@@ -71,6 +95,7 @@ public abstract class Enemy : MonoBehaviour {
     }
 
     private void Chase() {
+        animator.SetBool("Patrol", true);
         Vector3 targetPosition = ProjectToNavMesh(player.position);
 
         if (targetPosition != Vector3.zero && IsDestinationReachable(targetPosition)) {
@@ -100,15 +125,22 @@ public abstract class Enemy : MonoBehaviour {
 
     public void ResetAttack() {
         alreadyAttacked = false;
+        navMeshAgent.isStopped = false;
+        animator.SetBool("Attack", false);
     }
 
     public void TakeDamage(int damage) {
         enemyHealth -= damage;
 
-        if(enemyHealth <= 0) DestroyEnemy();
+        if(enemyHealth <= 0) {
+            isDead = true;
+            navMeshAgent.isStopped = true;
+            GetComponent<CapsuleCollider>().isTrigger = true;
+            animator.SetTrigger("Death");
+        }
     }
 
-    private void DestroyEnemy() {
+    public void DestroyEnemy() {
         Destroy(gameObject);
     }
 }
