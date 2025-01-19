@@ -7,39 +7,53 @@ public class Door : MonoBehaviour
     [Header("Details")]
     public PlayerSystem player;
     public CanvasController playerHUD;
-    public KeyNeeded keyNeeded;
-    public enum KeyNeeded{
-        red,
-        blue,
-        yellow
-    }
+    public bool killDoor;
+    public int enemiesToKill;
+    private bool checkInput;
+    private bool entryText = true;
 
     private void Awake() {
         player = GameObject.Find("Player").GetComponent<PlayerSystem>();
         playerHUD = GameObject.Find("PlayerHUD").GetComponent<CanvasController>();
     }
 
-    private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag != "Player") return;
+    private void Update() {
+        if(!killDoor && Input.GetKeyDown(KeyCode.E) && checkInput) {
+            entryText = false;
+            if(!player.hasKey) {
+                playerHUD.SetStatusText("You need a key!");
+                return;
+            }
+            playerHUD.SetStatusText("");
+            Destroy(gameObject);
+        } else if (killDoor && enemiesToKill == 0) {
+            playerHUD.SetStatusText("A door has opened!");
+            Destroy(gameObject);
+        }
 
-        if(keyNeeded == KeyNeeded.red) {
-            if(!player.hasRedKey) {
-                playerHUD.SetStatusText("You need the RED key to open this door!");
-                return;
+        if(playerHUD.statusTimer > playerHUD.statusTime && checkInput == true) {
+            entryText = true;
+        }
+    }
+
+    private void OnTriggerStay(Collider other) {
+        if (other.gameObject.tag != "Player") return;
+        
+        checkInput = true;
+        if(entryText) {
+            if(killDoor) {
+                playerHUD.SetStatusText("This door needs more souls");
+            } else {
+                playerHUD.SetStatusText("Press E to open the door");
             }
-            Destroy(gameObject);
-        } else if(keyNeeded == KeyNeeded.blue) {
-            if(!player.hasRedKey) {
-                playerHUD.SetStatusText("You need the BLUE key to open this door!");
-                return;
-            }
-            Destroy(gameObject);
-        } else if(keyNeeded == KeyNeeded.yellow) {
-            if(!player.hasYellowKey) {
-                playerHUD.SetStatusText("You need the YELLOW key to open this door!");
-                return;
-            }
-            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if(other.gameObject.tag == "Player") {
+            playerHUD.SetStatusText("");
+            checkInput = false;
+            entryText = true;
         }
     }
 }

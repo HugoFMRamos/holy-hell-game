@@ -17,9 +17,7 @@ public class PlayerSystem : MonoBehaviour {
     public GameObject playerCamera;
 
     [Header("Player Keys")]
-    public bool hasRedKey;
-    public bool hasBlueKey;
-    public bool hasYellowKey;
+    public bool hasKey;
 
     private bool heavyMusic;
     private float timerUntilMusicStops;

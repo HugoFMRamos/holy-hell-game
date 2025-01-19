@@ -3,7 +3,6 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System;
 
 public class CanvasController : MonoBehaviour
 {
@@ -25,13 +24,13 @@ public class CanvasController : MonoBehaviour
     public Slider armorSlider;
     public Slider armorBonusSlider;
     public GameObject menuScreen;
-    public GameObject redKey;
-    public GameObject blueKey;
-    public GameObject yellowKey;
+    public GameObject key;
 
     private GameObject activeWeapon;
     private GameObject inventory;
-    private float statusTimer, miniStatusTimer, xSens, ySens;
+    public float statusTimer;
+    public float statusTime = 3.0f;
+    private float miniStatusTimer, xSens, ySens;
     private bool statusOn, miniStatusOn;
 
     private void Awake() {
@@ -78,13 +77,13 @@ public class CanvasController : MonoBehaviour
         }
 
         if(statusOn) statusTimer += Time.deltaTime;
-        if(statusTimer > 3.0f) {
+        if(statusTimer > statusTime) {
             ResetStatusText();
             statusOn = false;
         }
 
         if(miniStatusOn) miniStatusTimer += Time.deltaTime;
-        if(miniStatusTimer > 3.0f) {
+        if(miniStatusTimer > statusTime) {
             ResetMiniStatusText();
             miniStatusOn = false;
         }
@@ -155,18 +154,8 @@ public class CanvasController : MonoBehaviour
         }
     }
 
-    public void EnableKey(int keyToEnable) {
-        switch(keyToEnable) {
-            case 0:
-                redKey.SetActive(true);
-                break;
-            case 1:
-                blueKey.SetActive(true);
-                break;
-            case 2:
-                yellowKey.SetActive(true);
-                break;
-        }
+    public void EnableKey() {
+        key.SetActive(true);
     }
 
     public void ResumeGame() {
@@ -186,6 +175,6 @@ public class CanvasController : MonoBehaviour
     }
 
     public void QuitGame() {
-        Debug.Log("TO MAIN MENU.");
+        SceneManager.LoadScene("MainMenuScene");
     }
 }

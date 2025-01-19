@@ -1,3 +1,4 @@
+using UnityEditor.Callbacks;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,6 +11,7 @@ public abstract class Enemy : MonoBehaviour {
     public Transform orientation;
     public LayerMask whatIsGround, whatIsPlayer;
     public Animator animator;
+    public Door killDoor;
 
     [SerializeField] private int maxHealth;
 
@@ -122,9 +124,18 @@ public abstract class Enemy : MonoBehaviour {
     private void HandleDeath() {
         isDead = true;
         navMeshAgent.isStopped = true;
-        GetComponent<CapsuleCollider>().isTrigger = true;
+        if(!flyingEnemy) {
+            GetComponent<CapsuleCollider>().isTrigger = true;
+        } else {
+            Rigidbody rb = GetComponent<Rigidbody>();
+            rb.useGravity = true;
+            rb.isKinematic = false;
+            navMeshAgent.enabled = false;
+        }
         player.gameObject.GetComponent<PlayerSystem>().enemiesAggroed--;
         animator.SetTrigger("Death");
+
+        if(killDoor != null) killDoor.enemiesToKill--;
     }
 
     public void ResetAttack() {

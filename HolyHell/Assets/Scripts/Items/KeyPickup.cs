@@ -14,19 +14,9 @@ public class KeyPickup : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag != "Player") return;
 
-        if(keyColor == KeyColor.red) {
-            player.hasRedKey = true;
-            playerHUD.SetStatusText("You got the RED key!");
-            playerHUD.EnableKey(0);
-        } else if(keyColor == KeyColor.blue) {
-            player.hasBlueKey = true;
-            playerHUD.SetStatusText("You got the BLUE key!");
-            playerHUD.EnableKey(1);
-        } else if(keyColor == KeyColor.yellow) {
-            player.hasYellowKey = true;
-            playerHUD.SetStatusText("You got the YELLOW key!");
-            playerHUD.EnableKey(2);
-        }
+        player.hasKey = true;
+        playerHUD.SetStatusText("You got the key!");
+        playerHUD.EnableKey();
 
         Destroy(gameObject);
     }
