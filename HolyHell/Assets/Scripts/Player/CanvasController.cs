@@ -10,6 +10,7 @@ public class CanvasController : MonoBehaviour
     [Header("References")]
     public PlayerController playerController;
     public PlayerSystem playerSystem;
+    public CameraController cameraController;
     public List<GameObject> weaponList;
 
     [Header("Canvas Elements")]
@@ -23,20 +24,50 @@ public class CanvasController : MonoBehaviour
     public Slider healthBonusSlider;
     public Slider armorSlider;
     public Slider armorBonusSlider;
+    public GameObject menuScreen;
     public GameObject redKey;
     public GameObject blueKey;
     public GameObject yellowKey;
 
     private GameObject activeWeapon;
-    private float statusTimer, miniStatusTimer;
+    private GameObject inventory;
+    private float statusTimer, miniStatusTimer, xSens, ySens;
     private bool statusOn, miniStatusOn;
 
     private void Awake() {
+        inventory = GameObject.Find("Inventory");
         playerSystem = GameObject.Find("Player").GetComponent<PlayerSystem>();
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        cameraController = GameObject.Find("PlayerCamera").GetComponent<CameraController>();
+    }
+
+    private void Start() {
+        xSens = cameraController.xSensitivity;
+        ySens = cameraController.ySensitivity;
+
+        cameraController.xSensitivity = xSens;
+        cameraController.ySensitivity = ySens;
+        Time.timeScale = 1.0f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        inventory.SetActive(true);
     }
 
     private void Update() {
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            menuScreen.SetActive(!menuScreen.activeSelf);
+            bool isMenuActive = menuScreen.activeSelf;
+            cameraController.xSensitivity = isMenuActive ? 0.0f : xSens;
+            cameraController.ySensitivity = isMenuActive ? 0.0f : ySens;
+            Time.timeScale = isMenuActive ? 0.0f : 1.0f;
+            Cursor.lockState = isMenuActive ? CursorLockMode.None : CursorLockMode.Locked;
+            Cursor.visible = isMenuActive;
+            inventory.SetActive(!isMenuActive);
+        }
+
+
         SetPlayerHealth();
         SetPlayerArmor();
 
@@ -48,13 +79,13 @@ public class CanvasController : MonoBehaviour
 
         if(statusOn) statusTimer += Time.deltaTime;
         if(statusTimer > 3.0f) {
-            statusText.text =  "";
+            ResetStatusText();
             statusOn = false;
         }
 
         if(miniStatusOn) miniStatusTimer += Time.deltaTime;
         if(miniStatusTimer > 3.0f) {
-            miniStatusText.text =  "";
+            ResetMiniStatusText();
             miniStatusOn = false;
         }
     }
@@ -73,6 +104,10 @@ public class CanvasController : MonoBehaviour
 
     private void ResetStatusText() {
         statusText.text = "";
+    }
+
+    private void ResetMiniStatusText() {
+        miniStatusText.text = "";
     }
 
     private void SetAmmoText() {
@@ -134,8 +169,23 @@ public class CanvasController : MonoBehaviour
         }
     }
 
+    public void ResumeGame() {
+        menuScreen.SetActive(!menuScreen.activeSelf);
+        bool isMenuActive = menuScreen.activeSelf;
+        cameraController.xSensitivity = isMenuActive ? 0.0f : xSens;
+        cameraController.ySensitivity = isMenuActive ? 0.0f : ySens;
+        Time.timeScale = isMenuActive ? 0.0f : 1.0f;
+        Cursor.lockState = isMenuActive ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = isMenuActive;
+        inventory.SetActive(!isMenuActive);
+    }
+
     public void RestartLevel() {
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
+    }
+
+    public void QuitGame() {
+        Debug.Log("TO MAIN MENU.");
     }
 }
