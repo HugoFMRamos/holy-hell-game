@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
 {
     [Header("Inventory")]
     public List<GameObject> weaponList;
+    public List<GameObject> animatorObjects;
     public KeyCode waferKey;
     public KeyCode shotgunKey;
     public KeyCode grenadeKey;
@@ -41,7 +42,9 @@ public class Inventory : MonoBehaviour
         }
         else if(weapon.isInInventory) {
             weaponList[weaponToSwitch].SetActive(true);
+            animatorObjects[weaponToSwitch].SetActive(true);
             weaponList[currentWeapon].SetActive(false);
+            animatorObjects[currentWeapon].SetActive(false);
             currentWeapon = weaponToSwitch;
         }
     }
@@ -49,6 +52,7 @@ public class Inventory : MonoBehaviour
     private void ClearInventory() {
         for(int i = 0; i < weaponList.Count; i++) {
             weaponList[i].SetActive(false);
+            animatorObjects[i].SetActive(false);
         }
         SwitchWeapon(0);
     }
