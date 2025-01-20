@@ -31,6 +31,10 @@ public abstract class Enemy : MonoBehaviour {
     private float deathTimer;
     private bool inEnemyCounter;
 
+    [Header("Enemy Audio")]
+
+    public AudioEnemies audioEnemies;
+
     private void Awake() {
         player = GameObject.Find("Player").transform;
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -119,6 +123,9 @@ public abstract class Enemy : MonoBehaviour {
         if (enemyHealth <= 0 && !isDead) {
             HandleDeath();
         }
+        else{
+            audioEnemies.playThisSound(2);
+        }
     }
 
     private void HandleDeath() {
@@ -133,7 +140,9 @@ public abstract class Enemy : MonoBehaviour {
             navMeshAgent.enabled = false;
         }
         player.gameObject.GetComponent<PlayerSystem>().enemiesAggroed--;
+
         animator.SetTrigger("Death");
+        audioEnemies.playThisSound(3);
 
         if(killDoor != null) killDoor.enemiesToKill--;
     }
