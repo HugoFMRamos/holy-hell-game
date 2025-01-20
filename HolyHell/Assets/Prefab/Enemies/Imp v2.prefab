@@ -53,8 +53,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 15
+  MaxDistance: 800
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -332,7 +332,7 @@ MonoBehaviour:
   timeBetweenAttacks: 1
   alreadyAttacked: 0
   flyingEnemy: 0
-  sightRange: 30
+  sightRange: 15
   attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0

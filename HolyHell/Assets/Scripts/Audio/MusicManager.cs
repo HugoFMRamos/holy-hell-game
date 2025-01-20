@@ -7,6 +7,7 @@ public class MusicManager : MonoBehaviour
     public AudioMixer audioMixer;
     public string heavyMusicVolumeParameter = "heavyMusicVolume";
     public string calmMusicVolumeParameter = "calmMusicVolume";
+    public string filterMenuParameter = "menuFilter";
 
     // Volume control
     public float maxVolume = -8f;
@@ -25,7 +26,10 @@ public class MusicManager : MonoBehaviour
     private float targetHeavyVolume;
     private float targetCalmVolume;
 
+    private float maxFilterValue = 22000, minFilterValue = 500;
+
     public PlayerSystem playerSystem;
+    public CanvasController canvasController;
 
     void Start()
     {
@@ -38,22 +42,36 @@ public class MusicManager : MonoBehaviour
 
         audioMixer.SetFloat(heavyMusicVolumeParameter, currentHeavyVolume);
         audioMixer.SetFloat(calmMusicVolumeParameter, currentCalmVolume);
+        audioMixer.SetFloat(filterMenuParameter, maxFilterValue);
     }
+
+    private float delayTimer = 0.0f; 
 
     void Update()
     {
-        // Update target state
+
+        if(canvasController.isMenuActive){
+            audioMixer.SetFloat(filterMenuParameter, minFilterValue);
+        } else audioMixer.SetFloat(filterMenuParameter, maxFilterValue);
+
+
+        delayTimer += Time.deltaTime;
+
+        if (delayTimer < 5.5f)
+        return; 
+
+
+
         bool newShouldPlayHeavy = playerSystem.heavyMusic;
         if (newShouldPlayHeavy != shouldPlayHeavy)
         {
-            // Start a new transition
             shouldPlayHeavy = newShouldPlayHeavy;
             targetHeavyVolume = shouldPlayHeavy ? maxVolume : minVolume;
             targetCalmVolume = shouldPlayHeavy ? minVolume : maxVolume;
-            transitionProgress = 0.0f; // Reset the transition progress
+            transitionProgress = 0.0f; 
         }
 
-        // Smoothly transition the volumes
+
         if (transitionProgress < 1.0f)
         {
             transitionProgress += Time.deltaTime / transitionDuration;
