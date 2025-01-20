@@ -19,6 +19,7 @@ public class PlayerSystem : MonoBehaviour {
     [Header("Player Keys")]
     public bool hasKey;
 
+    [Header("Audio Cues")]
     public bool heavyMusic;
     private float timerUntilMusicStops;
 
@@ -32,6 +33,11 @@ public class PlayerSystem : MonoBehaviour {
         if(heavyMusic && enemiesAggroed < 5) {
             timerUntilMusicStops += Time.deltaTime;
         }
+
+        if(enemiesAggroed != 0){
+            heavyMusic = true;
+        }
+        else heavyMusic = false;
 
         if(health <= 0 && !hasPlayerDied) {
             hasPlayerDied = true;

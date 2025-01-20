@@ -32,6 +32,7 @@ public class CanvasController : MonoBehaviour
     public float statusTime = 3.0f;
     private float miniStatusTimer, xSens, ySens;
     private bool statusOn, miniStatusOn;
+    public bool isMenuActive;
 
     private void Awake() {
         inventory = GameObject.Find("Inventory");
@@ -57,7 +58,7 @@ public class CanvasController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             menuScreen.SetActive(!menuScreen.activeSelf);
-            bool isMenuActive = menuScreen.activeSelf;
+            isMenuActive = menuScreen.activeSelf;
             cameraController.xSensitivity = isMenuActive ? 0.0f : xSens;
             cameraController.ySensitivity = isMenuActive ? 0.0f : ySens;
             Time.timeScale = isMenuActive ? 0.0f : 1.0f;
@@ -87,6 +88,8 @@ public class CanvasController : MonoBehaviour
             ResetMiniStatusText();
             miniStatusOn = false;
         }
+
+        //Debug.Log(isMenuActive);
     }
 
     public void SetStatusText(string text) {

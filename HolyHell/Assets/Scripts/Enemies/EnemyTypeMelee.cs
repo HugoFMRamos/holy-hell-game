@@ -7,7 +7,6 @@ public class EnemyTypeMelee : Enemy {
 
     public override void Attack() {
         animator.SetBool("Attack", true);
-
         //Make sure enemy doesn't move
         navMeshAgent.isStopped = true;
         transform.LookAt(player);

@@ -6,28 +6,13 @@ public class AudioGeneralOneClip : MonoBehaviour
 
     public AudioSource audioSource;
 
-    void Awake()
-    {
-
-        if (audioSource == null)
-        {
-            audioSource = GetComponent<AudioSource>();
-        }
-    }
-
-
     public void PlaySpecificAudio(int clipIndex)
     {
         if (clipIndex >= 0 && clipIndex < audioClips.Length)
         {
             PlayAudio(audioClips, clipIndex);
         }
-        else
-        {
-            Debug.LogWarning("Clip index out of bounds: Please select a valid clip index.");
-        }
     }
-
 
     public void PlayRandomAudio()
     {
@@ -35,10 +20,6 @@ public class AudioGeneralOneClip : MonoBehaviour
         {
             int randomClipIndex = Random.Range(0, audioClips.Length);
             PlayAudio(audioClips, randomClipIndex);
-        }
-        else
-        {
-            Debug.LogWarning("Audio clip array is empty: Please add audio clips.");
         }
     }
 
