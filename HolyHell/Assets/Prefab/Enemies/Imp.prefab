@@ -121,7 +121,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 11
+  m_Speed: 8
   m_Acceleration: 999
   avoidancePriority: 50
   m_AngularSpeed: 999
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dfbebf75e8d1794a87d1eda0db4453d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 200
+  enemyHealth: 50
   isEnemyAggroed: 0
   isDead: 0
   detectedWeaponSound: 0
@@ -159,8 +159,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   animator: {fileID: 8307405807162813024}
+  killDoor: {fileID: 0}
   maxHealth: 0
-  walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 10
   timeBetweenAttacks: 1
   alreadyAttacked: 0
@@ -170,7 +170,7 @@ MonoBehaviour:
   playerInSightRange: 0
   playerInAttackRange: 0
   damageCollider: {fileID: 5881503024906300174}
-  damage: 20
+  damage: 15
 --- !u!65 &5881503024906300174
 BoxCollider:
   m_ObjectHideFlags: 0

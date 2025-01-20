@@ -12,6 +12,9 @@ public class Door : MonoBehaviour
     private bool checkInput;
     private bool entryText = true;
 
+    public GameObject doorOpen;
+    public GameObject doorClose;
+
     private void Awake() {
         player = GameObject.Find("Player").GetComponent<PlayerSystem>();
         playerHUD = GameObject.Find("PlayerHUD").GetComponent<CanvasController>();
@@ -25,6 +28,10 @@ public class Door : MonoBehaviour
                 return;
             }
             playerHUD.SetStatusText("");
+            if(doorOpen != null & doorClose != null){
+                doorClose.SetActive(false);
+                doorOpen.SetActive(true);
+            }
             Destroy(gameObject);
         } else if (killDoor && enemiesToKill == 0) {
             playerHUD.SetStatusText("A door has opened!");

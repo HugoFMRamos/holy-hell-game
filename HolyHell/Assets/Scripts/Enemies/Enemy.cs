@@ -124,13 +124,13 @@ public abstract class Enemy : MonoBehaviour {
     private void HandleDeath() {
         isDead = true;
         navMeshAgent.isStopped = true;
+        navMeshAgent.enabled = false;
         if(!flyingEnemy) {
             GetComponent<CapsuleCollider>().isTrigger = true;
         } else {
             Rigidbody rb = GetComponent<Rigidbody>();
             rb.useGravity = true;
             rb.isKinematic = false;
-            navMeshAgent.enabled = false;
         }
         player.gameObject.GetComponent<PlayerSystem>().enemiesAggroed--;
         animator.SetTrigger("Death");
