@@ -175,6 +175,6 @@ public class CanvasController : MonoBehaviour
     }
 
     public void QuitGame() {
-        SceneManager.LoadScene("MainMenuScene");
+        SceneManager.LoadScene("NEWMainMenu");
     }
 }
