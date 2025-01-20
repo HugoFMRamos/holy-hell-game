@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,6 +7,7 @@ public class ExitGate : MonoBehaviour
     [Header("Details")]
     public PlayerSystem player;
     public CanvasController playerHUD;
+    public string nextScene;
     public bool needsKey;
     private bool checkInput;
     private bool entryText = true;
@@ -24,7 +26,7 @@ public class ExitGate : MonoBehaviour
                     return;
                 }
             }
-            SceneManager.LoadScene("MainMenuScene");
+            SceneManager.LoadScene(nextScene);
         }
 
         if(playerHUD.statusTimer > playerHUD.statusTime && checkInput == true) {

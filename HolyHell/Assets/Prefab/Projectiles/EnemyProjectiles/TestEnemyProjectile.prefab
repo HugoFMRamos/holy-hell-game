@@ -147,7 +147,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  damage: 20
+  explosionEffect: {fileID: 0}
+  whatIsHitOnExplode:
+    serializedVersion: 2
+    m_Bits: 0
+  damage: 5
   lifeSpan: 3
+  explosionRadius: 0
   affectedByGravity: 0
+  canExplode: 0
   destroyOnImpact: 1

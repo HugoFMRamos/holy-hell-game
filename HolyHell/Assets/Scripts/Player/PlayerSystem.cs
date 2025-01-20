@@ -19,7 +19,7 @@ public class PlayerSystem : MonoBehaviour {
     [Header("Player Keys")]
     public bool hasKey;
 
-    private bool heavyMusic;
+    public bool heavyMusic;
     private float timerUntilMusicStops;
 
     private void Update() {

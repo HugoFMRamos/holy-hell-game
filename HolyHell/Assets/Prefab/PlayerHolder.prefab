@@ -1626,7 +1626,7 @@ MonoBehaviour:
   startAmmo: 10
   maxAmmo: 50
   ammo: 0
-  isInInventory: 1
+  isInInventory: 0
   weaponTransform: {fileID: 5861288392810910433}
   fireButton: 323
   whatIsEnemy:
@@ -1934,9 +1934,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 9005129544072770768}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -500, y: -22.8}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -500, y: 60}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1857641009501612175
@@ -2722,7 +2722,7 @@ MonoBehaviour:
   startAmmo: 10
   maxAmmo: 200
   ammo: 0
-  isInInventory: 1
+  isInInventory: 0
   weaponTransform: {fileID: 5861288392810910433}
   fireButton: 323
   whatIsEnemy:
@@ -2814,7 +2814,7 @@ MonoBehaviour:
   startAmmo: 10
   maxAmmo: 100
   ammo: 0
-  isInInventory: 1
+  isInInventory: 0
   weaponTransform: {fileID: 5861288392810910433}
   fireButton: 323
   whatIsEnemy:
@@ -3378,7 +3378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxHealth: 200
-  armor: 100
+  armor: 0
   maxArmor: 200
   enemiesAggroed: 0
   armorAbsorbtionPercentage: 0.8
@@ -3387,8 +3387,7 @@ MonoBehaviour:
   player: {fileID: 6436273430125789197}
   playerCamera: {fileID: 3565927487693911524}
   hasKey: 0
-  hasBlueKey: 0
-  hasYellowKey: 0
+  heavyMusic: 0
 --- !u!114 &9118904260197066188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3403,13 +3402,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orientation: {fileID: 2741202584414878712}
   p1: {fileID: 8478337768327780709}
-  walkSpeed: 7
-  sprintSpeed: 12
+  walkSpeed: 5
+  sprintSpeed: 9
   groundDrag: 5
   jumpForce: 15
   jumpCooldown: 0.25
   airMultiplier: 0.8
-  crouchSpeed: 6
+  crouchSpeed: 4
   crouchYScale: 0.5
   radius: 0
   currentSpeed: 0
@@ -4281,7 +4280,7 @@ MonoBehaviour:
   startAmmo: 10
   maxAmmo: 30
   ammo: 0
-  isInInventory: 1
+  isInInventory: 0
   weaponTransform: {fileID: 5861288392810910433}
   fireButton: 323
   whatIsEnemy:
