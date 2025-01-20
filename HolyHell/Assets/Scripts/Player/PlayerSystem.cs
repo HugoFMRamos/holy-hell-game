@@ -19,8 +19,12 @@ public class PlayerSystem : MonoBehaviour {
     [Header("Player Keys")]
     public bool hasKey;
 
-    private bool heavyMusic;
+    public bool heavyMusic;
     private float timerUntilMusicStops;
+
+    [Header("Player Audio")]
+
+    public AudioManager audioManager;
 
     private void Update() {
         checkEnemyCounter();
@@ -43,6 +47,8 @@ public class PlayerSystem : MonoBehaviour {
         player.SetActive(false);
         playerCamera.GetComponent<CameraController>().enabled = false;
         gameOverScreen.SetActive(true);
+
+        audioManager.PlaySelectedGeneralRandom(1);
     }
 
     public void DamageMe(int damage) {
@@ -51,6 +57,9 @@ public class PlayerSystem : MonoBehaviour {
             if (health < 0) {
                 health = 0;
             }
+
+            audioManager.PlaySelectedGeneralRandom(0);
+
             return;
         }
 
@@ -66,6 +75,8 @@ public class PlayerSystem : MonoBehaviour {
         if (health < 0) {
             health = 0;
         }
+
+        audioManager.PlaySelectedGeneralRandom(0);
     }
 
     public void HealMe(int valueToAdd, bool addToHealth) {
