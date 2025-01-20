@@ -13,6 +13,7 @@ public abstract class Weapon : MonoBehaviour
     public Transform weaponTransform;
     public KeyCode fireButton;
     public LayerMask whatIsEnemy;
+    public Animator weaponAnimator;
     
     public virtual void Fire() {}
 

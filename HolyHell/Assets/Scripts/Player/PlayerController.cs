@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
     public Transform p1;
     private CapsuleCollider capsuleCollider;
     private Rigidbody rb;
-
     private float moveSpeed;
+
     [Header("Movement")]
     public float walkSpeed;
     public float sprintSpeed;
