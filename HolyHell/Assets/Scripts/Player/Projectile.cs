@@ -29,6 +29,7 @@ public class Projectile : MonoBehaviour
         rb.AddForce(rb.transform.forward * forwardSpeed, ForceMode.Impulse);
         rb.AddForce(rb.transform.up * upwardSpeed, ForceMode.Impulse);
         timer = lifeSpan;
+
     }
 
     private void Update() {
@@ -44,6 +45,7 @@ public class Projectile : MonoBehaviour
 
     private void Explode()
     {
+
         Instantiate(explosionEffect, transform.position, transform.rotation);
         Collider[] hits = Physics.OverlapSphere(transform.position, explosionRadius, whatIsHitOnExplode);
         foreach(Collider collider in hits) {
@@ -56,6 +58,8 @@ public class Projectile : MonoBehaviour
                 player.DamageMe(damage);
             }
         }
+
+        
     }
 
     private void OnCollisionEnter(Collision other) {

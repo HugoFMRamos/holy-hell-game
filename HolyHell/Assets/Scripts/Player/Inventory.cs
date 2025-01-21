@@ -12,7 +12,7 @@ public class Inventory : MonoBehaviour
     public KeyCode grenadeKey;
     public KeyCode scepterKey;
     public KeyCode bibleKey;
-    private int currentWeapon = 4;
+    private int currentWeapon = 3;
     
     private IEnumerator Start() {
         yield return new WaitForSeconds(.001f);
@@ -28,9 +28,7 @@ public class Inventory : MonoBehaviour
             SwitchWeapon(2);
         } else if (Input.GetKeyDown(scepterKey)) {
             SwitchWeapon(3);
-        } else if (Input.GetKeyDown(bibleKey)) {
-            SwitchWeapon(4);
-        }
+        } 
     }
 
     private void SwitchWeapon(int weaponToSwitch) {

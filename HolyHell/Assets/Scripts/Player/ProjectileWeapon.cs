@@ -7,11 +7,16 @@ public class ProjectileWeapon : Weapon
     [Header("Specific Weapon Stats")]
     public GameObject projectilePrefab;
     private float timer;
+    public bool fireSpecificSFX;
+
+    AudioWeaponCall audioWeaponCall;
 
     private void Start()
     {
         timer = 0f;
         base.ammo = base.startAmmo;
+
+        audioWeaponCall = GetComponent<AudioWeaponCall>();
     }
 
     private void Update()
@@ -27,5 +32,9 @@ public class ProjectileWeapon : Weapon
     public override void Fire() {
         TriggerEnemies();
         Instantiate(projectilePrefab, weaponTransform.position, weaponTransform.rotation);
+
+        if(!fireSpecificSFX) audioWeaponCall.FireRandom();
+        else audioWeaponCall.FireSpecific(0);
+
     }
 }
