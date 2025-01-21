@@ -5724,6 +5724,9 @@ MonoBehaviour:
   - {fileID: 6744593361083725795}
   - {fileID: 4231764632421540877}
   - {fileID: 6745580039216093014}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   waferKey: 49
   shotgunKey: 50
@@ -6197,7 +6200,10 @@ MonoBehaviour:
     width: 1
     height: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &6296953496279125848
+=======
+--- !u!1 &7855306463706777337
 =======
 --- !u!1 &7855306463706777337
 GameObject:
@@ -6211,6 +6217,63 @@ GameObject:
   - component: {fileID: 2713648316697194438}
   m_Layer: 0
   m_Name: SFX_Shotgun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1451345282693833395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7855306463706777337}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 392956183028357435}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2713648316697194438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7855306463706777337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6671a809f0d549ab913421a29cbbcd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 5274b124fe4e043a6ae29cb26436012a, type: 3}
+  - {fileID: 8300000, guid: 3bbc481b2f33e40ad86df758da7c6d9e, type: 3}
+  audioSource: {fileID: 9033300314360822252}
+--- !u!1 &7885779644300109139
+>>>>>>> Stashed changes
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+<<<<<<< Updated upstream
+  - component: {fileID: 1451345282693833395}
+  - component: {fileID: 2713648316697194438}
+  m_Layer: 0
+  m_Name: SFX_Shotgun
+=======
+  - component: {fileID: 7621336253267813037}
+  - component: {fileID: 5439797235187550146}
+  - component: {fileID: 5442815131199762137}
+  m_Layer: 6
+  m_Name: Holy Grenade
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6418,6 +6481,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db6805b6b57649fbb84b66d5db1ee25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
+=======
+  firerate: 0.7
+  startAmmo: 10
+  maxAmmo: 50
+  ammo: 0
+  isInInventory: 1
+  weaponTransform: {fileID: 2859904725100749907}
+  fireButton: 323
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 1024
+  weaponAnimator: {fileID: 3190350364192271844}
+  projectilePrefab: {fileID: 5912538073697083724, guid: 8babfe1f53ce07b42b53a1c23e4525e2, type: 3}
+  fireSpecificSFX: 1
+--- !u!114 &5442815131199762137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7885779644300109139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db6805b6b57649fbb84b66d5db1ee25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
   audioGeneralOneClip: {fileID: 779401477055201313}
 --- !u!1 &8116130310169562035
 >>>>>>> Stashed changes

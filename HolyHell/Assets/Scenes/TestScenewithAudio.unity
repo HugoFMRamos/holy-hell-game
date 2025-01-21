@@ -682,6 +682,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioGeneralOneClip: {fileID: 72468706}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!850595691 &793766029
 LightingSettings:
@@ -1249,6 +1252,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1d8a51e26c1e945b7bbc822c367681a3, type: 3}
   - {fileID: 8300000, guid: aabbf92044572458cbaf9cbe3928e991, type: 3}
   audioSource: {fileID: 700925644}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1001 &1094112383
 PrefabInstance:
@@ -1824,6 +1830,7 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &1581162059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,11 +1960,16 @@ AudioSource:
     m_PostInfinity: 2
     m_RotationOrder: 4
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!4 &1616883227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1279278028777270315, guid: 9a934b00a044a4f30aa04618a81d7579, type: 3}
   m_PrefabInstance: {fileID: 1948503538}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1001 &1646030055
 PrefabInstance:
@@ -2045,6 +2057,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioGeneralOneClip: {fileID: 536037239}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &1711387418
 GameObject:
@@ -5960,7 +5975,10 @@ MonoBehaviour:
   m_SelectedEdges: []
   m_SelectedVertices: 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1781640821 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6334545317980853245, guid: 9a934b00a044a4f30aa04618a81d7579, type: 3}
