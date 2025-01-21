@@ -4,6 +4,11 @@ public class HealthPickup : PickUp {
     [Header("Specific Stats")]
     public PlayerSystem player;
 
+    private void Awake() {
+        player = GameObject.Find("Player").GetComponent<PlayerSystem>();
+        playerHUD = GameObject.Find("PlayerHUD").GetComponent<CanvasController>();
+    }
+
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag != "Player") return;
 

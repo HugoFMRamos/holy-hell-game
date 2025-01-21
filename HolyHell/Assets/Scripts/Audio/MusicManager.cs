@@ -31,6 +31,11 @@ public class MusicManager : MonoBehaviour
     public PlayerSystem playerSystem;
     public CanvasController canvasController;
 
+    private void Awake() {
+        playerSystem = GameObject.Find("Player").GetComponent<PlayerSystem>();
+        canvasController = GameObject.Find("PlayerHUD").GetComponent<CanvasController>();
+    }
+
     void Start()
     {
         // Initialize volume states
