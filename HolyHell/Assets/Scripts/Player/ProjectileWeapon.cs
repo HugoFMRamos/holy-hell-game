@@ -8,6 +8,8 @@ public class ProjectileWeapon : Weapon
     public GameObject projectilePrefab;
     private float timer;
 
+    public AudioWeaponCall audioWeaponCall;
+
     private void Start()
     {
         timer = 0f;
@@ -43,5 +45,9 @@ public class ProjectileWeapon : Weapon
     public override void Fire() {
         TriggerEnemies();
         Instantiate(projectilePrefab, weaponTransform.position, weaponTransform.rotation);
+
+        if(audioWeaponCall != null){
+            audioWeaponCall.FireRandom();
+        }
     }
 }
