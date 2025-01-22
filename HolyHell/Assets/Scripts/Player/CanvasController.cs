@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class CanvasController : MonoBehaviour
 {
     [Header("References")]
+    public GameManager gameManager;
     public PlayerController playerController;
     public PlayerSystem playerSystem;
     public CameraController cameraController;
@@ -65,6 +66,10 @@ public class CanvasController : MonoBehaviour
             Cursor.lockState = isMenuActive ? CursorLockMode.None : CursorLockMode.Locked;
             Cursor.visible = isMenuActive;
             inventory.SetActive(!isMenuActive);
+        }
+
+        if(playerSystem.gameOverScreen.activeSelf == true && Input.GetKeyDown(KeyCode.E)) {
+            RestartLevel();
         }
 
 
@@ -173,11 +178,21 @@ public class CanvasController : MonoBehaviour
     }
 
     public void RestartLevel() {
+        GameObject player = GameObject.Find("PlayerHolder_v2");
+        if (player != null)
+        {
+            PlayerSystem playerSystem = player.transform.GetChild(0).GetComponent<PlayerSystem>();
+            Inventory inventory = player.transform.GetChild(0).transform.GetChild(0).GetComponent<Inventory>();
+            gameManager.SavePlayerStats(playerSystem, inventory);
+            
+            Destroy(player);
+        }
+
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
     }
 
     public void QuitGame() {
-        SceneManager.LoadScene("NEWMainMenu");
+        SceneManager.LoadScene(0);
     }
 }

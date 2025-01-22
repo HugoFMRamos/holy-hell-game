@@ -5,16 +5,25 @@ using UnityEngine.SceneManagement;
 public class ExitGate : MonoBehaviour
 {
     [Header("Details")]
+    public GameManager gameManager;
     public PlayerSystem player;
     public CanvasController playerHUD;
-    public string nextScene;
+    public int nextScene;
     public bool needsKey;
     private bool checkInput;
     private bool entryText = true;
+    private GameObject playerObject;
 
-    private void Awake() {
-        player = GameObject.Find("Player").GetComponent<PlayerSystem>();
-        playerHUD = GameObject.Find("PlayerHUD").GetComponent<CanvasController>();
+    private void Start() {
+        GameManager.OnPlayerInstantiated += HandlePlayerInstantiated;
+
+        // Check if the player is already cached
+        if (GameManager.CachedPlayerInstance != null)
+        {
+            HandlePlayerInstantiated(GameManager.CachedPlayerInstance);
+        }
+
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     private void Update() {
@@ -26,12 +35,31 @@ public class ExitGate : MonoBehaviour
                     return;
                 }
             }
-            SceneManager.LoadScene(nextScene);
+
+            LoadNextScene();
         }
 
         if(playerHUD.statusTimer > playerHUD.statusTime && checkInput == true) {
             entryText = true;
         }
+    }
+
+    private void HandlePlayerInstantiated(GameObject playerInstance)
+    {
+        playerObject = playerInstance;
+        player = playerObject.transform.GetChild(0).GetComponent<PlayerSystem>();
+        playerHUD = playerObject.transform.GetChild(1).GetComponent<CanvasController>();
+    }
+
+    private void LoadNextScene() {
+        if (playerObject != null)
+        {
+            Inventory inventory = playerObject.transform.GetChild(0).transform.GetChild(0).GetComponent<Inventory>();
+            gameManager.SavePlayerStats(player, inventory);
+            
+            Destroy(playerObject);
+        }
+        SceneManager.LoadScene(nextScene);
     }
 
     private void OnTriggerStay(Collider other) {

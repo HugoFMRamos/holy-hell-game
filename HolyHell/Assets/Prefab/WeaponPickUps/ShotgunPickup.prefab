@@ -153,7 +153,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   valueToAdd: 20
   playerHUD: {fileID: 0}
+  playerObject: {fileID: 0}
   weapon: {fileID: 0}
+  inventory: {fileID: 0}
+  weaponName: Boomstick
 --- !u!1001 &4825088085594557071
 PrefabInstance:
   m_ObjectHideFlags: 0

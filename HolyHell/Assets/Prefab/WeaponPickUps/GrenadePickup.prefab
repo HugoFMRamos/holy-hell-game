@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 4101601200036358470}
   - component: {fileID: 2396485190399721027}
   - component: {fileID: 381597659586960762}
+  - component: {fileID: 8378145017357897159}
   m_Layer: 0
   m_Name: GrenadePickup
   m_TagString: Untagged
@@ -153,7 +154,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   valueToAdd: 20
   playerHUD: {fileID: 0}
+  playerObject: {fileID: 0}
   weapon: {fileID: 0}
+  inventory: {fileID: 0}
+  weaponName: 
+--- !u!114 &8378145017357897159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5688240173653180096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bc91c475eda7564599fe259eeb13c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesToSpawn:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &1103450393202170279
 PrefabInstance:
   m_ObjectHideFlags: 0

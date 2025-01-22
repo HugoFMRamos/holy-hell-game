@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Enemy
   - PlayerProjectile
+  - Climbable
+  - Key
+  - Exit
+  - Seal
   layers:
   - Default
   - TransparentFX
@@ -19,7 +23,7 @@ TagManager:
   - WhatIsDoor
   - WhatIsEnemy
   - WhatIsEnemyProjectile
-  - 
+  - WhatIsWeapon
   - 
   - 
   - 

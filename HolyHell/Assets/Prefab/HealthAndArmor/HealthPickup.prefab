@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 9099231387971134903}
   - component: {fileID: 1646494770337026835}
   - component: {fileID: 8052702724169651492}
+  - component: {fileID: -1884162470081446576}
   m_Layer: 0
   m_Name: HealthPickup
   m_TagString: Untagged
@@ -151,9 +152,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a5234022e56630419e20df9c2465ef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valueToAdd: 999
+  valueToAdd: 20
   playerHUD: {fileID: 0}
+  playerObject: {fileID: 0}
   player: {fileID: 0}
+--- !u!114 &-1884162470081446576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138770039223573529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bc91c475eda7564599fe259eeb13c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesToSpawn: []
 --- !u!1001 &1628987551001390899
 PrefabInstance:
   m_ObjectHideFlags: 0

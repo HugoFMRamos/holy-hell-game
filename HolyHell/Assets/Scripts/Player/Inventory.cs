@@ -12,12 +12,7 @@ public class Inventory : MonoBehaviour
     public KeyCode shotgunKey;
     public KeyCode grenadeKey;
     public KeyCode scepterKey;
-    private int currentWeapon = 3;
-    
-    private IEnumerator Start() {
-        yield return new WaitForSeconds(.001f);
-        ClearInventory(); 
-    }
+    public int currentWeapon = 3;
 
     private void Update() {
         if(Input.GetKeyDown(waferKey)) {
@@ -31,7 +26,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private void SwitchWeapon(int weaponToSwitch) {
+    public void SwitchWeapon(int weaponToSwitch) {
         Weapon weapon = weaponList[weaponToSwitch].GetComponent<Weapon>();
 
         if(weaponToSwitch == currentWeapon) {
@@ -44,13 +39,5 @@ public class Inventory : MonoBehaviour
             animatorObjects[currentWeapon].SetActive(false);
             currentWeapon = weaponToSwitch;
         }
-    }
-
-    private void ClearInventory() {
-        for(int i = 0; i < weaponList.Count; i++) {
-            weaponList[i].SetActive(false);
-            animatorObjects[i].SetActive(false);
-        }
-        SwitchWeapon(0);
     }
 }

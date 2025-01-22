@@ -9,16 +9,27 @@ public class AmmoPickup : PickUp
     public Inventory inventory;
     public string weaponName;
 
-    private void Awake() {
-        inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+    private void Start() {
+        GameManager.OnPlayerInstantiated += HandlePlayerInstantiated;
+
+        // Check if the player is already cached
+        if (GameManager.CachedPlayerInstance != null)
+        {
+            HandlePlayerInstantiated(GameManager.CachedPlayerInstance);
+        }
+    }
+
+    private void HandlePlayerInstantiated(GameObject playerInstance)
+    {
+        playerObject = playerInstance;
+        inventory = playerObject.transform.GetChild(0).transform.GetChild(0).GetComponent<Inventory>();
+        playerHUD = playerObject.transform.GetChild(1).GetComponent<CanvasController>();
 
         foreach(GameObject gameObject in inventory.weaponList) {
             if(gameObject.name == weaponName) {
                 weapon = gameObject.GetComponent<Weapon>();
             }
         }
-
-        playerHUD = GameObject.Find("PlayerHUD").GetComponent<CanvasController>();
     }
 
     private void OnTriggerEnter(Collider other) {

@@ -1,4 +1,3 @@
-using UnityEditor.Callbacks;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,8 +11,9 @@ public abstract class Enemy : MonoBehaviour {
     public LayerMask whatIsGround, whatIsPlayer;
     public Animator animator;
     public Door killDoor;
-
     [SerializeField] private int maxHealth;
+    private GameObject playerObject;
+    public PlayerSystem playerSystem;
 
     // Patroling
     private Vector3 walkPoint;
@@ -36,17 +36,31 @@ public abstract class Enemy : MonoBehaviour {
     public AudioEnemies audioEnemies;
 
     private void Awake() {
-        player = GameObject.Find("Player").transform;
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     private void Start() {
         maxHealth = enemyHealth;
+
+        GameManager.OnPlayerInstantiated += HandlePlayerInstantiated;
+
+        // Check if the player is already cached
+        if (GameManager.CachedPlayerInstance != null)
+        {
+           HandlePlayerInstantiated(GameManager.CachedPlayerInstance);
+        }
     }
 
     private void Update() {
         UpdateState();
         HandleDeathTimer();
+    }
+
+    private void HandlePlayerInstantiated(GameObject playerInstance)
+    {
+        playerObject = playerInstance;
+        player = playerObject.transform.GetChild(0).transform;
+        playerSystem = playerObject.transform.GetChild(0).GetComponent<PlayerSystem>();
     }
 
     private void UpdateState() {
@@ -139,7 +153,7 @@ public abstract class Enemy : MonoBehaviour {
             rb.useGravity = true;
             rb.isKinematic = false;
         }
-        player.gameObject.GetComponent<PlayerSystem>().enemiesAggroed--;
+        playerSystem.enemiesAggroed--;
 
         animator.SetTrigger("Death");
         audioEnemies.playThisSound(3);
@@ -154,7 +168,7 @@ public abstract class Enemy : MonoBehaviour {
     }
 
     private void UpdateAggroedCounter() {
-        player.gameObject.GetComponent<PlayerSystem>().enemiesAggroed++;
+        playerSystem.enemiesAggroed++;
         inEnemyCounter = true;
     }
 

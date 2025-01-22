@@ -47,9 +47,6 @@ public class PlayerSystem : MonoBehaviour {
 
     public void GameOver()
     {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-
         player.SetActive(false);
         playerCamera.GetComponent<CameraController>().enabled = false;
         gameOverScreen.SetActive(true);

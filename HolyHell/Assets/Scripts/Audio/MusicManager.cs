@@ -30,11 +30,7 @@ public class MusicManager : MonoBehaviour
 
     public PlayerSystem playerSystem;
     public CanvasController canvasController;
-
-    private void Awake() {
-        playerSystem = GameObject.Find("Player").GetComponent<PlayerSystem>();
-        canvasController = GameObject.Find("PlayerHUD").GetComponent<CanvasController>();
-    }
+    private GameObject playerObject;
 
     void Start()
     {
@@ -48,6 +44,14 @@ public class MusicManager : MonoBehaviour
         audioMixer.SetFloat(heavyMusicVolumeParameter, currentHeavyVolume);
         audioMixer.SetFloat(calmMusicVolumeParameter, currentCalmVolume);
         audioMixer.SetFloat(filterMenuParameter, maxFilterValue);
+
+        GameManager.OnPlayerInstantiated += HandlePlayerInstantiated;
+
+        // Check if the player is already cached
+        if (GameManager.CachedPlayerInstance != null)
+        {
+            HandlePlayerInstantiated(GameManager.CachedPlayerInstance);
+        }
     }
 
     private float delayTimer = 0.0f; 
@@ -65,8 +69,7 @@ public class MusicManager : MonoBehaviour
         if (delayTimer < 5.5f)
         return; 
 
-
-
+        Debug.Log("START MUSIC");
         bool newShouldPlayHeavy = playerSystem.heavyMusic;
         if (newShouldPlayHeavy != shouldPlayHeavy)
         {
@@ -88,5 +91,12 @@ public class MusicManager : MonoBehaviour
             audioMixer.SetFloat(heavyMusicVolumeParameter, currentHeavyVolume);
             audioMixer.SetFloat(calmMusicVolumeParameter, currentCalmVolume);
         }
+    }
+
+    private void HandlePlayerInstantiated(GameObject playerInstance)
+    {
+        playerObject = playerInstance;
+        playerSystem = playerObject.transform.GetChild(0).GetComponent<PlayerSystem>();
+        canvasController = playerObject.transform.GetChild(1).GetComponent<CanvasController>();
     }
 }

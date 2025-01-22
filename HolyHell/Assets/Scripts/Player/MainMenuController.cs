@@ -16,6 +16,12 @@ public class MainMenuController : MonoBehaviour
     }
     
     private void Start() {
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player != null)
+        {
+            Destroy(player);
+        }
+
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         StartCoroutine(FadeImage(true));
