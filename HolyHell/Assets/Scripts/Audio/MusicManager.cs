@@ -70,10 +70,9 @@ public class MusicManager : MonoBehaviour
         return; 
 
         Debug.Log("START MUSIC");
-        bool newShouldPlayHeavy = playerSystem.heavyMusic;
-        if (newShouldPlayHeavy != shouldPlayHeavy)
+        if (playerSystem.heavyMusic != shouldPlayHeavy)
         {
-            shouldPlayHeavy = newShouldPlayHeavy;
+            shouldPlayHeavy = playerSystem.heavyMusic;
             targetHeavyVolume = shouldPlayHeavy ? maxVolume : minVolume;
             targetCalmVolume = shouldPlayHeavy ? minVolume : maxVolume;
             transitionProgress = 0.0f; 

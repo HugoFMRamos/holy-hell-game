@@ -146,10 +146,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb69aecf9c2414945bcd587a4b6772c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 999
   forwardSpeed: 20
   upwardSpeed: 0
   lifeSpan: 3
+  explosionRadius: 0
   affectedByGravity: 0
   destroyOnImpact: 1
+  canExplode: 0
+  whatIsHitOnExplode:
+    serializedVersion: 2
+    m_Bits: 0
   orientation: {fileID: 0}
+  explosionEffect: {fileID: 0}

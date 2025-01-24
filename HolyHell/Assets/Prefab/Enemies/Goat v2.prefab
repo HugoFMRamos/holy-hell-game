@@ -354,11 +354,15 @@ MonoBehaviour:
   animator: {fileID: 2202197228237927556}
   killDoor: {fileID: 0}
   maxHealth: 0
+  playerSystem: {fileID: 0}
   walkPointRange: 10
-  timeBetweenAttacks: 0.5
+  timeBetweenAttacks: 5
+  attackTimer: 0
   alreadyAttacked: 0
   flyingEnemy: 0
-  sightRange: 15
+  canChase: 0
+  attacking: 0
+  sightRange: 150
   attackRange: 12
   playerInSightRange: 0
   playerInAttackRange: 0

@@ -315,7 +315,6 @@ MonoBehaviour:
   enemyHealth: 50
   isEnemyAggroed: 0
   isDead: 0
-  detectedWeaponSound: 0
   navMeshAgent: {fileID: 7535904386033315843}
   player: {fileID: 0}
   orientation: {fileID: 0}
@@ -328,14 +327,20 @@ MonoBehaviour:
   animator: {fileID: 8307405807162813024}
   killDoor: {fileID: 0}
   maxHealth: 0
+  playerSystem: {fileID: 0}
   walkPointRange: 10
   timeBetweenAttacks: 1
+  attackTimer: 0
   alreadyAttacked: 0
   flyingEnemy: 0
-  sightRange: 15
+  meleeEnemy: 1
+  sightRange: 150
   attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
+  angry: 0
+  canChase: 0
+  attacking: 0
   audioEnemies: {fileID: 2147292847897725641}
   damageCollider: {fileID: 5881503024906300174}
   damage: 15
@@ -358,7 +363,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 0.7, y: 1, z: 0.7}
+  m_Size: {x: 1, y: 1.9, z: 0.7}
   m_Center: {x: 0, y: 0, z: 1}
 --- !u!1001 &1225000286953656107
 PrefabInstance:

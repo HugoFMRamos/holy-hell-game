@@ -4,7 +4,7 @@ using UnityEngine.AI;
 public abstract class Enemy : MonoBehaviour {
     [Header("General Enemy Stats")]
     public int enemyHealth;
-    public bool isEnemyAggroed, isDead, detectedWeaponSound = false;
+    public bool isEnemyAggroed, isDead;
     public NavMeshAgent navMeshAgent;
     public Transform player;
     public Transform orientation;
@@ -21,12 +21,12 @@ public abstract class Enemy : MonoBehaviour {
     public float walkPointRange;
 
     // Attacking
-    public float timeBetweenAttacks;
-    public bool alreadyAttacked, flyingEnemy;
+    public float timeBetweenAttacks, attackTimer;
+    public bool flyingEnemy, meleeEnemy;
 
     // States
     public float sightRange, attackRange;
-    public bool playerInSightRange, playerInAttackRange;
+    public bool playerInSightRange, playerInAttackRange, angry, canChase, attacking;
 
     private float deathTimer;
     private bool inEnemyCounter;
@@ -54,6 +54,14 @@ public abstract class Enemy : MonoBehaviour {
     private void Update() {
         UpdateState();
         HandleDeathTimer();
+
+        if(canChase) {
+            attackTimer += Time.deltaTime;
+        }
+
+        if(attackTimer >= timeBetweenAttacks && !attacking) {
+            attacking = true;
+        }
     }
 
     private void HandlePlayerInstantiated(GameObject playerInstance)
@@ -64,18 +72,55 @@ public abstract class Enemy : MonoBehaviour {
     }
 
     private void UpdateState() {
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-        isEnemyAggroed = enemyHealth < maxHealth || detectedWeaponSound || playerInSightRange;
+        playerInSightRange = CheckLineOfSight(sightRange);
+        playerInAttackRange = CheckLineOfSight(attackRange);
+        isEnemyAggroed = enemyHealth < maxHealth || playerInSightRange;
 
         if (isDead) return;
 
-        if (!isEnemyAggroed && !playerInSightRange && !playerInAttackRange) Idle();
-        else if (isEnemyAggroed && !playerInSightRange && !playerInAttackRange) Patrolling();
-        else if (isEnemyAggroed && playerInSightRange && !playerInAttackRange) Chase();
-        else if (isEnemyAggroed && playerInAttackRange) Attack();
+        if(meleeEnemy) {
+            if (!angry) Idle();
+            else if (angry && !canChase) Patrolling();
+            else if (angry && canChase && !playerInAttackRange) Chase();
+            else if (angry && canChase && playerInAttackRange && playerInSightRange) Attack();
+        } else {
+            if (!angry) Idle();
+            else if (angry && !canChase) Patrolling();
+            else if (angry && canChase && !attacking) Chase();
+            else if (angry && canChase && attacking && playerInSightRange) Attack();
+        }
 
-        if (isEnemyAggroed && !inEnemyCounter) UpdateAggroedCounter();
+        if (isEnemyAggroed && !inEnemyCounter) {
+            UpdateAggroedCounter();
+            angry = true;
+        }
+
+        if(angry) {
+            Vector3 targetPosition = ProjectToNavMesh(player.position);
+            if (targetPosition != Vector3.zero && IsDestinationReachable(targetPosition)) {
+                canChase = true;
+            } else {
+                canChase = false;
+            }
+        }
+    }
+
+    private bool CheckLineOfSight(float range)
+    {
+        RaycastHit hit;
+        Vector3 directionToPlayer = (player.transform.position - transform.position).normalized;
+
+        // Cast a ray toward the player
+        if (Physics.Raycast(transform.position, directionToPlayer, out hit, range))
+        {
+            // Check if the ray hits the player
+            if (hit.collider.gameObject.CompareTag("Player"))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private void HandleDeathTimer() {
@@ -118,13 +163,7 @@ public abstract class Enemy : MonoBehaviour {
 
     private void Chase() {
         animator.SetBool("Patrol", true);
-        Vector3 targetPosition = ProjectToNavMesh(player.position);
-
-        if (targetPosition != Vector3.zero && IsDestinationReachable(targetPosition)) {
-            navMeshAgent.SetDestination(player.position);
-        } else {
-            Patrolling();
-        }
+        navMeshAgent.SetDestination(player.position);
     }
 
     public virtual void Attack() {
@@ -162,9 +201,11 @@ public abstract class Enemy : MonoBehaviour {
     }
 
     public void ResetAttack() {
-        alreadyAttacked = false;
         navMeshAgent.isStopped = false;
         animator.SetBool("Attack", false);
+        animator.SetBool("Patrol", true);
+        attackTimer = 0.0f;
+        attacking = false;
     }
 
     private void UpdateAggroedCounter() {

@@ -26,6 +26,8 @@ public class CanvasController : MonoBehaviour
     public Slider armorBonusSlider;
     public GameObject menuScreen;
     public GameObject key;
+    public List<GameObject> selectWeaponImages;
+    public List<GameObject> invWeaponImages;
 
     private GameObject activeWeapon;
     private GameObject inventory;
@@ -80,6 +82,7 @@ public class CanvasController : MonoBehaviour
         if (activeWeapon != null)
         {
             SetAmmoText();
+            SetWeaponIcon();
         }
 
         if(statusOn) statusTimer += Time.deltaTime;
@@ -125,6 +128,27 @@ public class CanvasController : MonoBehaviour
             ammoText.text = weapon.ammo + " | " + weapon.maxAmmo;
         }
         weaponNameText.text = weapon.name;
+    }
+
+    private void SetWeaponIcon() {
+        Weapon weapon = activeWeapon.GetComponent<Weapon>();
+        foreach(GameObject gameObject in selectWeaponImages) {
+            if(gameObject.name.Equals(weapon.name)) {
+                gameObject.SetActive(true);
+            } else {
+                gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public void SetWeaponsAvailable() {
+        for(int i = 0; i < weaponList.Count; i++) {
+            Weapon weapon = weaponList[i].GetComponent<Weapon>();
+            if(weapon.isInInventory) {
+                RawImage image = invWeaponImages[i].GetComponent<RawImage>();
+                image.color = new Color(1, 1, 1);
+            }
+        }
     }
 
     private void SetPlayerHealth() {

@@ -19,13 +19,12 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject); // Persist across scenes
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
             Destroy(gameObject);
         }
-
-        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -36,14 +35,18 @@ public class GameManager : MonoBehaviour
             SpawnPlayer();
         } else {
             ResetPlayerData();
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+            Destroy(gameObject);
         }
     }
 
     public void SpawnPlayer() {
         GameObject playerObject = Instantiate(playerPrefab, spawnPoint.transform.position, Quaternion.identity);
         PlayerSystem playerSystem = playerObject.transform.GetChild(0).GetComponent<PlayerSystem>();
+        CanvasController playerHUD = playerObject.transform.GetChild(1).GetComponent<CanvasController>();
         Inventory inventory = playerObject.transform.GetChild(0).transform.GetChild(0).GetComponent<Inventory>();
         LoadPlayerData(playerSystem, inventory);
+        playerHUD.SetWeaponsAvailable();
         CachedPlayerInstance = playerObject;
 
         OnPlayerInstantiated?.Invoke(playerObject);
@@ -53,11 +56,13 @@ public class GameManager : MonoBehaviour
     {
         // Reset stats if needed after a true game over
         playerData = new(0, 0, 0, new List<int>(), new List<string>());
+        CachedPlayerInstance = null;
     }
 
     public void LoadPlayerData(PlayerSystem player, Inventory inventory)
     {
         if(playerData.Health == 0) {
+            inventory.SwitchWeapon(playerData.CurrentWeapon);
             return;
         }
 

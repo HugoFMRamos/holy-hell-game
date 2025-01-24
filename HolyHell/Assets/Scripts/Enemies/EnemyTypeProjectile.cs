@@ -8,8 +8,8 @@ public class EnemyTypeProjectile : Enemy {
 
     public override void Attack() {
         animator.SetBool("Attack", true);
+        animator.SetBool("Patrol", false);
 
-        //Make sure enemy doesn't move
         navMeshAgent.isStopped = true;
         Vector3 targetPosition = new Vector3(player.position.x, transform.position.y, player.position.z);
         transform.LookAt(targetPosition);

@@ -44,6 +44,7 @@ public class WeaponPickup : PickUp {
 
         string text = "You got the " + weapon.name + "!";
         playerHUD.SetMiniStatusText(text);
+        playerHUD.SetWeaponsAvailable();
         Destroy(gameObject);
     }
 }

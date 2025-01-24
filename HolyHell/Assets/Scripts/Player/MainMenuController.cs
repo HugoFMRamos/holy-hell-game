@@ -9,6 +9,8 @@ public class MainMenuController : MonoBehaviour
     [Header("Canvas Elements")]
     public GameObject tutorialScreen;
     public Image img;
+    public AudioSource musicSource;
+    public AudioClip introClip;
     private bool onOrOff = false;
 
     private void Awake() {
@@ -29,6 +31,7 @@ public class MainMenuController : MonoBehaviour
     }
 
     public void PlayGame() {
+        PlaySong();
         StartCoroutine(FadeImage(false));
         Invoke(nameof(Play), 7.5f);
     }
@@ -70,6 +73,12 @@ public class MainMenuController : MonoBehaviour
                 yield return null;
             }
         }
+    }
+
+    private void PlaySong() {
+        musicSource.clip = introClip;
+        musicSource.loop = false;
+        musicSource.Play();
     }
 
     private void EnableMenu() {

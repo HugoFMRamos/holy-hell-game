@@ -43,7 +43,6 @@ public class ProjectileWeapon : Weapon
     }
 
     public override void Fire() {
-        TriggerEnemies();
         Instantiate(projectilePrefab, weaponTransform.position, weaponTransform.rotation);
 
         if(audioWeaponCall != null){
