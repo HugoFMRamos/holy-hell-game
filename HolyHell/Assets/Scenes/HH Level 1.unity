@@ -273,6 +273,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -433,6 +437,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -449,6 +457,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -516098083770646512, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -461,12 +473,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1364076815127437966, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364076815127437966, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 1364076815127437966, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -479,7 +499,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 795416983}
   m_SourcePrefab: {fileID: 100100000, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
 --- !u!4 &28035513 stripped
 Transform:
@@ -559,6 +582,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -586,7 +613,7 @@ GameObject:
   - component: {fileID: 37009228}
   m_Layer: 3
   m_Name: Pew Aisle R
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1096,6 +1123,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -1171,6 +1202,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1695,7 +1730,7 @@ GameObject:
   - component: {fileID: 88472746}
   m_Layer: 3
   m_Name: Second Floor
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2127,6 +2162,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -2255,6 +2294,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3470,6 +3513,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -3710,6 +3757,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4564,6 +4615,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -5031,6 +5086,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -5068,7 +5127,7 @@ GameObject:
   - component: {fileID: 366469786}
   m_Layer: 3
   m_Name: Cylinder (1)
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6709,6 +6768,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -7335,7 +7398,7 @@ GameObject:
   - component: {fileID: 538516507}
   m_Layer: 3
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8554,7 +8617,7 @@ GameObject:
   - component: {fileID: 567934549}
   m_Layer: 3
   m_Name: Altar
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8851,7 +8914,7 @@ GameObject:
   - component: {fileID: 581754543}
   m_Layer: 3
   m_Name: Rug
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9300,6 +9363,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -9463,6 +9530,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9733,7 +9804,7 @@ GameObject:
   - component: {fileID: 648464786}
   m_Layer: 3
   m_Name: Pillar 2
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10676,6 +10747,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6353827638e30b84db02d729492a11de, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6353827638e30b84db02d729492a11de, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -10836,6 +10911,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -10933,6 +11012,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11083,7 +11166,7 @@ GameObject:
   - component: {fileID: 751201220}
   m_Layer: 3
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13224,7 +13307,7 @@ GameObject:
   - component: {fileID: 770565786}
   m_Layer: 3
   m_Name: Pew Aisle L
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13395,6 +13478,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -13506,6 +13593,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -13549,6 +13640,32 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4658753609816112467, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+--- !u!1 &795416982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+  m_PrefabInstance: {fileID: 28035512}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &795416983
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795416982}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 15.35, z: 7.91}
+  m_Center: {x: 0, y: 7.5, z: 0}
 --- !u!43 &804800130
 Mesh:
   m_ObjectHideFlags: 0
@@ -13773,6 +13890,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14846,6 +14967,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -15059,6 +15184,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15872,6 +16001,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -16328,7 +16461,7 @@ GameObject:
   - component: {fileID: 939822483}
   m_Layer: 3
   m_Name: Cube (6)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16872,6 +17005,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -16888,6 +17025,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -516098083770646512, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -16900,12 +17041,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1364076815127437966, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364076815127437966, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 1364076815127437966, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16918,7 +17067,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1585633414}
   m_SourcePrefab: {fileID: 100100000, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
 --- !u!4 &942768924 stripped
 Transform:
@@ -17826,7 +17978,7 @@ GameObject:
   - component: {fileID: 1020942833}
   m_Layer: 3
   m_Name: Pillar 1
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18409,6 +18561,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -18684,6 +18840,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -19217,6 +19377,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -19326,6 +19490,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -19537,6 +19705,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -19779,6 +19951,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -20170,7 +20346,7 @@ GameObject:
   - component: {fileID: 1252170343}
   m_Layer: 3
   m_Name: Pillar 4
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20209,7 +20385,7 @@ GameObject:
   - component: {fileID: 1256179018}
   m_Layer: 3
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20562,7 +20738,7 @@ GameObject:
   - component: {fileID: 1262260982}
   m_Layer: 3
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22526,6 +22702,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1302023627 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+  m_PrefabInstance: {fileID: 1975812927}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1312948657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22585,6 +22766,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -22744,6 +22929,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -22760,6 +22949,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -516098083770646512, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -22772,12 +22965,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1364076815127437966, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364076815127437966, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 1364076815127437966, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -22790,7 +22991,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1463539676}
   m_SourcePrefab: {fileID: 100100000, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
 --- !u!4 &1339258651 stripped
 Transform:
@@ -23215,6 +23419,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -23231,6 +23439,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -516098083770646512, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -23243,12 +23455,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1364076815127437966, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364076815127437966, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 1364076815127437966, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -23261,7 +23481,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1441435925}
   m_SourcePrefab: {fileID: 100100000, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
 --- !u!4 &1346033924 stripped
 Transform:
@@ -23678,6 +23901,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -23727,7 +23954,7 @@ GameObject:
   - component: {fileID: 1392617850}
   m_Layer: 3
   m_Name: Fences
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23973,11 +24200,63 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4658753609816112467, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+--- !u!1 &1441435924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+  m_PrefabInstance: {fileID: 1346033923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1441435925
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441435924}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 15.35, z: 7.91}
+  m_Center: {x: 0, y: 7.5, z: 0}
 --- !u!4 &1448327411 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1011867775530504573, guid: 2b23ac71805884851b28c21ce2cd5d21, type: 3}
   m_PrefabInstance: {fileID: 1816319264}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1463539675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+  m_PrefabInstance: {fileID: 1339258650}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1463539676
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463539675}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 15.35, z: 7.91}
+  m_Center: {x: 0, y: 7.5, z: 0}
 --- !u!114 &1482939303 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5992059197850268806, guid: 290d95977bd48c24891690822bf517a9, type: 3}
@@ -24109,6 +24388,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -24518,7 +24801,7 @@ GameObject:
   - component: {fileID: 1584698492}
   m_Layer: 3
   m_Name: Cylinder (2)
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25674,6 +25957,32 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &1585633413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+  m_PrefabInstance: {fileID: 942768923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1585633414
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585633413}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 15.35, z: 7.91}
+  m_Center: {x: 0, y: 7.5, z: 0}
 --- !u!1 &1590713624 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5396907397000547491, guid: b1cc39de227aa40c994d2d35f1fdf196, type: 3}
@@ -25765,6 +26074,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -26437,6 +26750,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -26651,7 +26968,7 @@ GameObject:
   - component: {fileID: 1632987690}
   m_Layer: 3
   m_Name: Pillars
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26694,7 +27011,7 @@ GameObject:
   - component: {fileID: 1673366656}
   m_Layer: 3
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28508,6 +28825,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -29238,6 +29559,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -30757,7 +31082,7 @@ GameObject:
   - component: {fileID: 1873960411}
   m_Layer: 3
   m_Name: Floor 0
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31047,6 +31372,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -31705,6 +32034,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -31802,6 +32135,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
+      propertyPath: m_TagString
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebf0a90e60425dc419170e5dbbfd99b3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -31912,6 +32249,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -31928,6 +32269,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -516098083770646512, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -31940,12 +32285,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1364076815127437966, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364076815127437966, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      propertyPath: m_TagString
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 1364076815127437966, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -31958,13 +32311,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1975812929}
   m_SourcePrefab: {fileID: 100100000, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
 --- !u!4 &1975812928 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: af9d76e49eb4bf84b96433d70998296b, type: 3}
   m_PrefabInstance: {fileID: 1975812927}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1975812929
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302023627}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 15.35, z: 7.91}
+  m_Center: {x: 0, y: 7.5, z: 0}
 --- !u!1001 &1976774222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32036,6 +32413,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0da48e81bdd9bd49830f36a1670a5e6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -32634,7 +33015,7 @@ GameObject:
   - component: {fileID: 2043085796}
   m_Layer: 3
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33137,7 +33518,7 @@ GameObject:
   - component: {fileID: 2064541655}
   m_Layer: 3
   m_Name: Pillar 3
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

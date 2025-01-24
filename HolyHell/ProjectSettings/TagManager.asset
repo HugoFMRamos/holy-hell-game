@@ -10,6 +10,11 @@ TagManager:
   - Key
   - Exit
   - Seal
+  - Openable
+  - Open
+  - Wood
+  - Grass
+  - Rock
   layers:
   - Default
   - TransparentFX

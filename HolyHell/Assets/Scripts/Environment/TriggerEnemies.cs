@@ -11,7 +11,7 @@ public class TriggerEnemies : MonoBehaviour
             foreach(GameObject gameObject in enemiesToSpawn) {
                 gameObject.SetActive(true);
             }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 }
