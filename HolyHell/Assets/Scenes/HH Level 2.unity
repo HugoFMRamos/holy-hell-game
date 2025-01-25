@@ -63828,18 +63828,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1732162895}
     m_Modifications:
-    - target: {fileID: 381597659586960762, guid: ebf380e8450f37e4eb7a700a1a8e055d, type: 3}
-      propertyPath: weapon
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 381597659586960762, guid: ebf380e8450f37e4eb7a700a1a8e055d, type: 3}
-      propertyPath: playerHUD
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 381597659586960762, guid: ebf380e8450f37e4eb7a700a1a8e055d, type: 3}
-      propertyPath: weaponName
-      value: Holy Grenade
-      objectReference: {fileID: 0}
     - target: {fileID: 2717234558566069639, guid: ebf380e8450f37e4eb7a700a1a8e055d, type: 3}
       propertyPath: m_Enabled
       value: 0

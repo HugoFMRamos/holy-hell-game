@@ -187,7 +187,8 @@ public class CanvasController : MonoBehaviour
     }
 
     public void EnableKey() {
-        key.SetActive(true);
+        RawImage keyImage = key.GetComponent<RawImage>();
+        keyImage.color = new Color(1,1,1,1);
     }
 
     public void ResumeGame() {

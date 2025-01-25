@@ -14,6 +14,7 @@ public abstract class Weapon : MonoBehaviour
     public KeyCode fireButton;
     public LayerMask whatIsEnemy;
     public Animator weaponAnimator;
+    public PlayerSystem playerSystem;
     
     public virtual void Fire() {}
 }

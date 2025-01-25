@@ -49,7 +49,11 @@ public class PlayerSystem : MonoBehaviour {
     {
         player.SetActive(false);
         playerCamera.GetComponent<CameraController>().enabled = false;
+        playerCamera.transform.GetChild(2).gameObject.SetActive(false);
         gameOverScreen.SetActive(true);
+        
+        Rigidbody rb = player.GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.None;
 
         audioManager.PlaySelectedGeneralRandom(1);
     }

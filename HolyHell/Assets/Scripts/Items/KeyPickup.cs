@@ -5,6 +5,7 @@ public class KeyPickup : MonoBehaviour {
     public PlayerSystem player;
     public CanvasController playerHUD;
     private GameObject playerObject;
+    public AudioClip pickupSound;
 
     private void Start() {
         GameManager.OnPlayerInstantiated += HandlePlayerInstantiated;
@@ -25,6 +26,10 @@ public class KeyPickup : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag != "Player") return;
+
+        AudioSource pickUpSource = playerHUD.transform.GetChild(9).GetComponent<AudioSource>();
+        pickUpSource.clip = pickupSound;
+        pickUpSource.Play();
 
         player.hasKey = true;
         playerHUD.SetStatusText("You got the key!");

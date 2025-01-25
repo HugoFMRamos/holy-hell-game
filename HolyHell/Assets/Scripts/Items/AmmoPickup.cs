@@ -38,10 +38,14 @@ public class AmmoPickup : PickUp
         if (weapon.ammo < weapon.maxAmmo) {
             weapon.ammo += base.valueToAdd;
             weapon.ammo = Mathf.Min(weapon.ammo, weapon.maxAmmo);
-        }
 
-        string text = weapon.name + "ammo! (+" + base.valueToAdd + ")";
-        playerHUD.SetMiniStatusText(text);
-        Destroy(gameObject);
+            AudioSource pickUpSource = playerHUD.transform.GetChild(9).GetComponent<AudioSource>();
+            pickUpSource.clip = pickupSound;
+            pickUpSource.Play();
+
+            string text = weapon.name + "ammo! (+" + base.valueToAdd + ")";
+            playerHUD.SetMiniStatusText(text);
+            Destroy(gameObject);
+        }
     }
 }

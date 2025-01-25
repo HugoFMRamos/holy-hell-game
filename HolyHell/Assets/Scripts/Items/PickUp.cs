@@ -8,4 +8,5 @@ public class PickUp : MonoBehaviour
     public int valueToAdd;
     public CanvasController playerHUD;
     public GameObject playerObject;
+    public AudioClip pickupSound;
 }

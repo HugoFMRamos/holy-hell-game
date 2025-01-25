@@ -155,9 +155,10 @@ MonoBehaviour:
   valueToAdd: 20
   playerHUD: {fileID: 0}
   playerObject: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: 27c594dd6647c074db879b8d977ae8a8, type: 3}
   weapon: {fileID: 0}
   inventory: {fileID: 0}
-  weaponName: 
+  weaponName: Holy Grenade
 --- !u!114 &8378145017357897159
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -68,7 +68,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueToAdd: 20
+  playerHUD: {fileID: 0}
+  playerObject: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: dd1256b156a2dc344900c14f96468369, type: 3}
   weapon: {fileID: 0}
+  inventory: {fileID: 0}
+  weaponName: Scepter
 --- !u!1 &5215218629385711111
 GameObject:
   m_ObjectHideFlags: 0

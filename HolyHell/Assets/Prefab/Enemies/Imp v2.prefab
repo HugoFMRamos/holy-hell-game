@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dfbebf75e8d1794a87d1eda0db4453d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 50
+  enemyHealth: 70
   isEnemyAggroed: 0
   isDead: 0
   navMeshAgent: {fileID: 7535904386033315843}
@@ -331,7 +331,6 @@ MonoBehaviour:
   walkPointRange: 10
   timeBetweenAttacks: 1
   attackTimer: 0
-  alreadyAttacked: 0
   flyingEnemy: 0
   meleeEnemy: 1
   sightRange: 150

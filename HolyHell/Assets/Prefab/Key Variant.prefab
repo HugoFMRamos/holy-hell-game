@@ -120,15 +120,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6894707247556116345, guid: e0796aba9e52c314589f7fc619183064, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.0543056
+      value: -1.6242695
       objectReference: {fileID: 0}
     - target: {fileID: 6894707247556116345, guid: e0796aba9e52c314589f7fc619183064, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 37.24
+      value: 11.036968
       objectReference: {fileID: 0}
     - target: {fileID: 6894707247556116345, guid: e0796aba9e52c314589f7fc619183064, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24.874678
+      value: 3.8417397
       objectReference: {fileID: 0}
     - target: {fileID: 6894707247556116345, guid: e0796aba9e52c314589f7fc619183064, type: 3}
       propertyPath: m_LocalRotation.w
@@ -136,15 +136,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6894707247556116345, guid: e0796aba9e52c314589f7fc619183064, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6894707247556116345, guid: e0796aba9e52c314589f7fc619183064, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6894707247556116345, guid: e0796aba9e52c314589f7fc619183064, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6894707247556116345, guid: e0796aba9e52c314589f7fc619183064, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -158,6 +158,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8360784628771786716, guid: e0796aba9e52c314589f7fc619183064, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f44e2d1727025164d81c93b69069934b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -191,4 +195,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bc91c475eda7564599fe259eeb13c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesToSpawn: []
+  enemiesToSpawn:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

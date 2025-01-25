@@ -1008,10 +1008,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthPickup
       objectReference: {fileID: 0}
-    - target: {fileID: 5732363444872085349, guid: d41b98f3dc6449640a21aa49c8fba254, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9099231387971134903, guid: d41b98f3dc6449640a21aa49c8fba254, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.472624
@@ -9451,10 +9447,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3768848799186050900, guid: f741bad4973c92a40ad31e1a30208261, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5227968741896547591, guid: f741bad4973c92a40ad31e1a30208261, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7117258279306793469, guid: f741bad4973c92a40ad31e1a30208261, type: 3}
@@ -19524,10 +19516,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthPickup (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 5732363444872085349, guid: d41b98f3dc6449640a21aa49c8fba254, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9099231387971134903, guid: d41b98f3dc6449640a21aa49c8fba254, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.0561962
@@ -19624,10 +19612,6 @@ PrefabInstance:
     - target: {fileID: 6080900011661533357, guid: f9065c49ba70d11408e27ae755e15092, type: 3}
       propertyPath: m_Name
       value: ArmorPickup
-      objectReference: {fileID: 0}
-    - target: {fileID: 7761795667819069777, guid: f9065c49ba70d11408e27ae755e15092, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33494,10 +33478,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6927386670133525160, guid: 48eb9be1bf67d964fb0d6d68aa0a5810, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8506849087013626231, guid: 48eb9be1bf67d964fb0d6d68aa0a5810, type: 3}
       propertyPath: m_Name
       value: ShotgunPickup
@@ -34508,14 +34488,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845947327}
     m_Modifications:
-    - target: {fileID: 661910805758016383, guid: a8f3d0b6480b15746b3755d479cdfa09, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 661910805758016383, guid: a8f3d0b6480b15746b3755d479cdfa09, type: 3}
-      propertyPath: playerHUD
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2487683240700890074, guid: a8f3d0b6480b15746b3755d479cdfa09, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.6242695
@@ -34557,10 +34529,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3119586487066364107, guid: a8f3d0b6480b15746b3755d479cdfa09, type: 3}
-      propertyPath: enemiesToSpawn.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3119586487066364107, guid: a8f3d0b6480b15746b3755d479cdfa09, type: 3}
       propertyPath: enemiesToSpawn.Array.data[0]
       value: 
       objectReference: {fileID: 753828656}
@@ -34595,10 +34563,6 @@ PrefabInstance:
     - target: {fileID: 3534977508518405337, guid: a8f3d0b6480b15746b3755d479cdfa09, type: 3}
       propertyPath: m_Name
       value: Key
-      objectReference: {fileID: 0}
-    - target: {fileID: 3534977508518405337, guid: a8f3d0b6480b15746b3755d479cdfa09, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

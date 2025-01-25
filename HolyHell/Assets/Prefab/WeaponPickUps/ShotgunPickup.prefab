@@ -48,7 +48,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4253231725501209630}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -154,6 +154,7 @@ MonoBehaviour:
   valueToAdd: 20
   playerHUD: {fileID: 0}
   playerObject: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: 094a28ba2d0ea634e9f3b71aa234a101, type: 3}
   weapon: {fileID: 0}
   inventory: {fileID: 0}
   weaponName: Boomstick

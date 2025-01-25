@@ -26,10 +26,14 @@ public class ArmorPickup : PickUp {
 
         if (player.armor < player.maxArmor) {
             player.HealMe(base.valueToAdd, false);
-        }
 
-        string text = "Armor! (+" + base.valueToAdd + ")";
-        playerHUD.SetMiniStatusText(text);
-        Destroy(gameObject);
+            AudioSource pickUpSource = playerHUD.transform.GetChild(9).GetComponent<AudioSource>();
+            pickUpSource.clip = pickupSound;
+            pickUpSource.Play();
+
+            string text = "Armor! (+" + base.valueToAdd + ")";
+            playerHUD.SetMiniStatusText(text);
+            Destroy(gameObject);
+        }
     }
 }

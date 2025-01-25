@@ -42,6 +42,10 @@ public class WeaponPickup : PickUp {
             weapon.ammo = Mathf.Min(weapon.ammo, weapon.maxAmmo);
         }
 
+        AudioSource pickUpSource = playerHUD.transform.GetChild(9).GetComponent<AudioSource>();
+        pickUpSource.clip = pickupSound;
+        pickUpSource.Play();
+
         string text = "You got the " + weapon.name + "!";
         playerHUD.SetMiniStatusText(text);
         playerHUD.SetWeaponsAvailable();

@@ -26,10 +26,14 @@ public class HealthPickup : PickUp {
 
         if (player.health < player.maxHealth) {
             player.HealMe(base.valueToAdd, true);
-        }
+            string text = "Health! (+" + base.valueToAdd + ")";
+            playerHUD.SetMiniStatusText(text);
+            
+            AudioSource pickUpSource = playerHUD.transform.GetChild(9).GetComponent<AudioSource>();
+            pickUpSource.clip = pickupSound;
+            pickUpSource.Play();
 
-        string text = "Health! (+" + base.valueToAdd + ")";
-        playerHUD.SetMiniStatusText(text);
-        Destroy(gameObject);
+            Destroy(gameObject);
+        }
     }
 }

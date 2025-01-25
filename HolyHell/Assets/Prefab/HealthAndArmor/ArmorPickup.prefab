@@ -72,6 +72,7 @@ MonoBehaviour:
   valueToAdd: 20
   playerHUD: {fileID: 0}
   playerObject: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: 273dfd379cfce314d89821c65f61519f, type: 3}
   player: {fileID: 0}
 --- !u!114 &-6614562060978010324
 MonoBehaviour:
@@ -134,7 +135,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7065799719963312444}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

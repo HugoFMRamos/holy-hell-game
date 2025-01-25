@@ -368,7 +368,6 @@ MonoBehaviour:
   enemyHealth: 100
   isEnemyAggroed: 0
   isDead: 0
-  detectedWeaponSound: 0
   navMeshAgent: {fileID: 4487271339863769077}
   player: {fileID: 0}
   orientation: {fileID: 215622840003860267}
@@ -383,13 +382,17 @@ MonoBehaviour:
   maxHealth: 0
   playerSystem: {fileID: 0}
   walkPointRange: 10
-  timeBetweenAttacks: 0.5
-  alreadyAttacked: 0
+  timeBetweenAttacks: 5
+  attackTimer: 0
   flyingEnemy: 1
+  meleeEnemy: 0
   sightRange: 150
   attackRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0
+  angry: 0
+  canChase: 0
+  attacking: 0
   audioEnemies: {fileID: 7784962544748169265}
   enemyProjectile: {fileID: 5912538073697083724, guid: e55eedd8aef0c7f4e9fd3a43ed25eab8, type: 3}
   projectileForwardSpeed: 20
