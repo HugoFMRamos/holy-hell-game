@@ -122,7 +122,7 @@ public class CanvasController : MonoBehaviour
 
     private void SetAmmoText() {
         Weapon weapon = activeWeapon.GetComponent<Weapon>();
-        if(weapon.startAmmo == -1) {
+        if(weapon.startAmmo <= -1) {
             ammoText.text = "- | ∞";
         } else {
             ammoText.text = weapon.ammo + " | " + weapon.maxAmmo;

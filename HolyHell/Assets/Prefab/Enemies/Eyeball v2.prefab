@@ -396,7 +396,7 @@ MonoBehaviour:
   audioEnemies: {fileID: 7784962544748169265}
   enemyProjectile: {fileID: 5912538073697083724, guid: e55eedd8aef0c7f4e9fd3a43ed25eab8, type: 3}
   projectileForwardSpeed: 20
-  projectileUpwardSpeed: 5
+  projectileUpwardSpeed: 0
 --- !u!1001 &5447329594207376347
 PrefabInstance:
   m_ObjectHideFlags: 0

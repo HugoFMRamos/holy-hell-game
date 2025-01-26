@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
         for(int i = 0; i < playerData.WeaponsInInventory.Count; i++) {
             Weapon weapon = inventory.weaponList[i].GetComponent<Weapon>();
             if(weapon.name.Equals(playerData.WeaponsInInventory[i])) {
-                weapon.ammo = playerData.WeaponAmmoList[i];
+                weapon.startAmmo = playerData.WeaponAmmoList[i];
                 weapon.isInInventory = true;
             }
         }
@@ -82,6 +82,10 @@ public class GameManager : MonoBehaviour
 
     public void SavePlayerStats(PlayerSystem player, Inventory inventory)
     {
+        if(CachedPlayerInstance != null) {
+            ResetPlayerData();
+        }
+        
         // Save current player stats to the data class
         playerData.Health = player.health;
         playerData.Armor = player.armor;

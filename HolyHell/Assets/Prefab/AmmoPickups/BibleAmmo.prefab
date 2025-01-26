@@ -151,12 +151,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a25e21efeeda94bb35d6dab1e4063d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valueToAdd: 0
+  valueToAdd: 20
   playerHUD: {fileID: 0}
   playerObject: {fileID: 0}
+  pickupSound: {fileID: 0}
   weapon: {fileID: 0}
   inventory: {fileID: 0}
-  weaponName: Scepter
+  weaponName: Bible
 --- !u!114 &-3239956545051378891
 MonoBehaviour:
   m_ObjectHideFlags: 0

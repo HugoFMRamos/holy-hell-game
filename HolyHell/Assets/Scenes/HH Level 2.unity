@@ -57922,7 +57922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5274948566686808284, guid: 998544d20a511cb40b99643b3a255f3c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9674226
+      value: -0.56892085
       objectReference: {fileID: 0}
     - target: {fileID: 5274948566686808284, guid: 998544d20a511cb40b99643b3a255f3c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -57930,11 +57930,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5274948566686808284, guid: 998544d20a511cb40b99643b3a255f3c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.253167
+      value: -0.82239234
       objectReference: {fileID: 0}
     - target: {fileID: 5274948566686808284, guid: 998544d20a511cb40b99643b3a255f3c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5274948566686808284, guid: 998544d20a511cb40b99643b3a255f3c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -57942,30 +57942,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5274948566686808284, guid: 998544d20a511cb40b99643b3a255f3c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -29.33
+      value: -249.35
       objectReference: {fileID: 0}
     - target: {fileID: 5274948566686808284, guid: 998544d20a511cb40b99643b3a255f3c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6065901079875956453, guid: 998544d20a511cb40b99643b3a255f3c, type: 3}
-      propertyPath: weapon
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6065901079875956453, guid: 998544d20a511cb40b99643b3a255f3c, type: 3}
-      propertyPath: playerHUD
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6065901079875956453, guid: 998544d20a511cb40b99643b3a255f3c, type: 3}
-      propertyPath: valueToAdd
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6065901079875956453, guid: 998544d20a511cb40b99643b3a255f3c, type: 3}
-      propertyPath: weaponName
-      value: Holy Grenade
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342772820671979349, guid: 998544d20a511cb40b99643b3a255f3c, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -64683,7 +64663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8387611873734658452, guid: 9d8684e90f1f1de49aa6b8f289d01e00, type: 3}
       propertyPath: nextScene
-      value: NEWMainMenu
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8387611873734658452, guid: 9d8684e90f1f1de49aa6b8f289d01e00, type: 3}
       propertyPath: playerHUD

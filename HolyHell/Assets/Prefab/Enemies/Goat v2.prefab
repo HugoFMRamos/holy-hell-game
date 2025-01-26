@@ -355,7 +355,7 @@ MonoBehaviour:
   maxHealth: 0
   playerSystem: {fileID: 0}
   walkPointRange: 10
-  timeBetweenAttacks: 3
+  timeBetweenAttacks: 2
   attackTimer: 0
   flyingEnemy: 0
   meleeEnemy: 0

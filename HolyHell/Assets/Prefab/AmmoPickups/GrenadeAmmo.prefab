@@ -69,13 +69,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a25e21efeeda94bb35d6dab1e4063d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valueToAdd: 0
+  valueToAdd: 5
   playerHUD: {fileID: 0}
   playerObject: {fileID: 0}
   pickupSound: {fileID: 8300000, guid: 27c594dd6647c074db879b8d977ae8a8, type: 3}
   weapon: {fileID: 0}
   inventory: {fileID: 0}
-  weaponName: Grenade
+  weaponName: Holy Grenade
 --- !u!114 &-8991243756728546005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +137,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4772105037854596000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -206,7 +206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b6c637cc4c4bf334a98972fcc9cbc24a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.046409182
+      value: -0.9999939
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b6c637cc4c4bf334a98972fcc9cbc24a, type: 3}
       propertyPath: m_LocalRotation.x
@@ -214,11 +214,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b6c637cc4c4bf334a98972fcc9cbc24a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9989225
+      value: 0.0034903984
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b6c637cc4c4bf334a98972fcc9cbc24a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b6c637cc4c4bf334a98972fcc9cbc24a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -226,7 +226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b6c637cc4c4bf334a98972fcc9cbc24a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -174.68
+      value: -360.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b6c637cc4c4bf334a98972fcc9cbc24a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

@@ -55,7 +55,7 @@ public abstract class Enemy : MonoBehaviour {
         UpdateState();
         HandleDeathTimer();
 
-        if(canChase) {
+        if(angry) {
             attackTimer += Time.deltaTime;
         }
 
@@ -80,14 +80,14 @@ public abstract class Enemy : MonoBehaviour {
 
         if(meleeEnemy) {
             if (!angry) Idle();
-            else if (angry && !canChase) Patrolling();
-            else if (angry && canChase && !playerInAttackRange) Chase();
-            else if (angry && canChase && playerInAttackRange && playerInSightRange) Attack();
+            if (angry && !canChase) Patrolling();
+            if (angry && canChase && !playerInAttackRange) Chase();
+            if (angry && playerInAttackRange && playerInSightRange) Attack();
         } else {
             if (!angry) Idle();
-            else if (angry && !canChase) Patrolling();
-            else if (angry && canChase && !attacking) Chase();
-            else if (angry && canChase && attacking && playerInSightRange) Attack();
+            if (angry && !canChase) Patrolling();
+            if (angry && canChase && !attacking) Chase();
+            if (angry && attacking && playerInSightRange) Attack();
         }
 
         if (isEnemyAggroed && !inEnemyCounter) {
