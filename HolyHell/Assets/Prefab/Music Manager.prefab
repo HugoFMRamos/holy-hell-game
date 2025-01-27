@@ -179,7 +179,7 @@ MonoBehaviour:
   heavyMusicVolumeParameter: heavyMusicVolume
   calmMusicVolumeParameter: calmMusicVolume
   filterMenuParameter: menuFilter
-  maxVolume: -8
+  maxVolume: -20
   minVolume: -80
   shouldPlayHeavy: 1
   transitionDuration: 1

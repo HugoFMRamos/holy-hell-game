@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     private Transform spawnPoint;
     public GameObject playerPrefab;
     public static GameObject CachedPlayerInstance { get; private set; }
-    public PlayerData playerData = new(0, 0, 0, new List<int>(), new List<string>());
+    public PlayerData playerData = new(0, 0, 0, 0, new List<int>(), new List<string>());
     public static event Action<GameObject> OnPlayerInstantiated;
 
     private void Awake()
@@ -29,11 +29,11 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {   
-        if(SceneManager.GetActiveScene().buildIndex != 0) {
+        if(SceneManager.GetActiveScene().buildIndex != 0 && SceneManager.GetActiveScene().buildIndex != 6) {
             Debug.Log($"New Scene Loaded: {scene.name}");
             spawnPoint = GameObject.Find("Spawnpoint").GetComponent<Transform>();
             SpawnPlayer();
-        } else {
+        } else if (SceneManager.GetActiveScene().buildIndex == 0){
             ResetPlayerData();
             SceneManager.sceneLoaded -= OnSceneLoaded;
             Destroy(gameObject);
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
     public void ResetPlayerData()
     {
         // Reset stats if needed after a true game over
-        playerData = new(0, 0, 0, new List<int>(), new List<string>());
+        playerData = new(0, 0, 0, 0, new List<int>(), new List<string>());
         CachedPlayerInstance = null;
     }
 
@@ -90,6 +90,7 @@ public class GameManager : MonoBehaviour
         playerData.Health = player.health;
         playerData.Armor = player.armor;
         playerData.CurrentWeapon = inventory.currentWeapon;
+        playerData.PreviousScene = SceneManager.GetActiveScene().buildIndex;
 
         for(int i = 0; i < inventory.weaponList.Count; i++) {
             Weapon weapon = inventory.weaponList[i].GetComponent<Weapon>();

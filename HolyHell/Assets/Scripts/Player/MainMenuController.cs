@@ -33,7 +33,7 @@ public class MainMenuController : MonoBehaviour
     public void PlayGame() {
         PlaySong();
         StartCoroutine(FadeImage(false));
-        Invoke(nameof(Play), 7.5f);
+        Invoke(nameof(Play), 6f);
     }
 
     public void ShowTutorial() {
@@ -66,10 +66,10 @@ public class MainMenuController : MonoBehaviour
         {
             EnableMenu();
             // loop over 1 second
-            for (float i = 0; i <= 7; i += Time.deltaTime)
+            for (float i = 0; i <= 5.5f; i += Time.deltaTime)
             {
                 // set color with i as alpha
-                img.color = new Color(0, 0, 0, i/7);
+                img.color = new Color(0, 0, 0, i/5.5f);
                 yield return null;
             }
         }
@@ -87,6 +87,6 @@ public class MainMenuController : MonoBehaviour
     }
 
     private void Play() {
-        SceneManager.LoadScene("HH Level 1");
+        SceneManager.LoadScene("LoadingScene");
     }
 }

@@ -7,15 +7,17 @@ public class PlayerData
     [SerializeField] private int health;
     [SerializeField] private int armor;
     [SerializeField] private int currentWeapon;
+    [SerializeField] private int previousScene;
     [SerializeField] private List<int> weaponAmmoList;
     [SerializeField] private List<string> weaponsInInventory;
 
     // Constructor
-    public PlayerData(int health, int armor, int currentWeapon, List<int> weaponAmmoList, List<string> weaponsInInventory)
+    public PlayerData(int health, int armor, int currentWeapon, int previousScene, List<int> weaponAmmoList, List<string> weaponsInInventory)
     {
         this.health = health;
         this.armor = armor;
         this.currentWeapon = currentWeapon;
+        this.previousScene = previousScene;
         this.weaponAmmoList = weaponAmmoList;
         this.weaponsInInventory = weaponsInInventory;
     }
@@ -37,6 +39,12 @@ public class PlayerData
     {
         get { return currentWeapon; }
         set { currentWeapon = value; }
+    }
+
+    public int PreviousScene
+    {
+        get { return previousScene; }
+        set { previousScene = value; }
     }
 
     public List<int> WeaponAmmoList

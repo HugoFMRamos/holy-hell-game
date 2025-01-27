@@ -26,7 +26,17 @@ public class AudioGeneralOneClip : MonoBehaviour
 
     private void PlayAudio(AudioClip[] clips, int index)
     {
-        audioSource.pitch = Random.Range(0.9f, 1.1f);  
-        audioSource.PlayOneShot(clips[index]);  
+        audioSource.pitch = Random.Range(0.9f, 1.1f);
+        AudioClip audioClip = clips[index];
+        Debug.Log(audioClip.name);
+        if(audioClip.name.Equals("weapon-bible-fire")) {
+            audioSource.loop = true;
+            audioSource.clip = clips[index];
+            audioSource.Play();
+        } else {
+            audioSource.loop = false;
+            audioSource.clip = null;
+            audioSource.PlayOneShot(clips[index]);
+        }
     }
 }

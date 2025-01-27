@@ -237,11 +237,15 @@ PrefabInstance:
     - target: {fileID: -1439730007547781893, guid: 68862b1a0e9bbd64b80f6d47ebbcdf0a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 23db254331253d84f847d7fae36e1c3e, type: 2}
+      objectReference: {fileID: 2100000, guid: 02d54a401f003b04ab315578d6be109d, type: 2}
     - target: {fileID: 919132149155446097, guid: 68862b1a0e9bbd64b80f6d47ebbcdf0a, type: 3}
       propertyPath: m_Name
       value: armor_pickup
       objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: 68862b1a0e9bbd64b80f6d47ebbcdf0a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4a237b10cf133e4ab5599772e72f87e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

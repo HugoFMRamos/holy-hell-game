@@ -12,7 +12,8 @@ public class Inventory : MonoBehaviour
     public KeyCode shotgunKey;
     public KeyCode grenadeKey;
     public KeyCode scepterKey;
-    public int currentWeapon = 3;
+    public KeyCode bibleKey;
+    public int currentWeapon = 4;
 
     private void Update() {
         if(Input.GetKeyDown(waferKey)) {
@@ -23,6 +24,8 @@ public class Inventory : MonoBehaviour
             SwitchWeapon(2);
         } else if (Input.GetKeyDown(scepterKey)) {
             SwitchWeapon(3);
+        } else if (Input.GetKeyDown(bibleKey)) {
+            SwitchWeapon(4);
         }
     }
 

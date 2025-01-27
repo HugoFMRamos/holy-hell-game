@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b33ad2404276c4a974981fb7143fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 40
+  enemyHealth: 70
   isEnemyAggroed: 0
   isDead: 0
   navMeshAgent: {fileID: 5385555941703230804}
